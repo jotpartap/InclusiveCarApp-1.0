@@ -62,9 +62,9 @@ if st.button("Submit"):
     if not texto.strip():
         st.warning("No lo dejes vacio")
     else:
-        v_res = obtener_nivel(vista, texto, PALABRAS_VISTA)
-        o_res = obtener_nivel(oido, texto, PALABRAS_OIDO)
-        m_res = obtener_nivel(movilidad, texto, PALABRAS_MOVILIDAD)
+        v_res = predecir(vista, texto, PALABRAS_VISTA)
+        o_res = predecir(oido, texto, PALABRAS_OIDO)
+        m_res = predecir(movilidad, texto, PALABRAS_MOVILIDAD)
 
         output = pd.DataFrame([{
             "vista": v_res,
