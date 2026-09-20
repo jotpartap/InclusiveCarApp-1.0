@@ -1,0 +1,588 @@
+texto,vista,oido,movilidad
+"Soy ciego de nacimiento, no veo absolutamente nada. Sin embargo, escucho perfectamente las conversaciones y me puedo mover sin ninguna dificultad.",0,1,1
+"Tengo una vista de águila, distingo detalles a kilómetros. En cuanto al oído es totalmente normal, pero desafortunadamente ando en silla de ruedas desde hace dos años.",2,1,0
+"Padezco de sordera profunda desde pequeño. Me apoyo en mis ojos porque tengo una visión casi sobrehumana y además corro maratones con gran agilidad.",2,0,2
+"Uso gafas para leer pero veo bien en general. Escucho perfectamente todo a mi alrededor y mi condición física para caminar o moverme es completamente normal.",1,1,1
+"Tengo muy poca visión, apenas distingo luces y sombras. Mi audición es normal y camino sin problemas.",0,1,1
+"Soy sordo profundo, no escucho absolutamente nada. Mi vista es normal y me desplazo a pie sin dificultad.",1,0,1
+"Tengo una vista normal, uso gafas para leer de cerca. Mi oído es completamente normal y mi movilidad es estándar.",1,1,1
+"Poseo visión sobrehumana, veo en la oscuridad como si fuera de día. Escucho bien y camino con total normalidad.",2,1,1
+"Tengo movilidad reducida severa, uso silla de ruedas. Mi vista y mi oído son normales.",1,1,0
+"Soy atleta de alto rendimiento, corro maratones con facilidad. Mi vista es normal y mi oído también.",1,1,2
+"Padezco hipoacusia severa, apenas percibo ruidos fuertes. Mi visión es estándar y camino sin problema.",1,0,1
+"Tengo una agudeza visual extrema, percibo detalles que otros no ven. Mi audición es normal y soy súper ágil.",2,1,2
+"Soy parapléjico, no puedo mover las piernas. Escucho perfectamente y veo bien.",1,1,0
+"Tengo un súper oído, escucho el mínimo susurro a metros. Mi vista es normal y me muevo sin dificultad.",1,2,1
+"Soy ciego total, dependo del bastón. Mi oído es normal y mi movilidad también.",0,1,1
+"Tengo una vista de águila, distingo detalles a kilómetros. Además, tengo un súper oído y soy extremadamente ágil.",2,2,2
+"Soy sordo profundo y además uso silla de ruedas. Mi vista es completamente normal.",1,0,0
+"Mi visión es normal, mi audición es normal y mi movilidad es normal.",1,1,1
+"Padezco ceguera total y sordera profunda. Sin embargo, tengo una agilidad sobrehumana.",0,0,2
+"Tengo muy poca visión y movilidad reducida, pero mi oído es sobrehumano.",0,2,0
+"Soy atleta de alto rendimiento. Veo bien, escucho bien y corro maratones.",1,1,2
+"Uso audífonos porque tengo hipoacusia severa. Mi vista es normal y camino sin problemas.",1,0,1
+"Tengo visión telescópica, veo a kilómetros. Mi oído es normal y ando en silla de ruedas.",2,1,0
+"Soy ciego de nacimiento y sordo profundo. Me desplazo en silla de ruedas.",0,0,0
+"Tengo una vista normal, un oído sobrehumano y una movilidad completamente estándar.",1,2,1
+"Poseo audición sobrehumana, percibo frecuencias que nadie más oye. Veo bien y camino sin dificultad.",1,2,1
+"Soy parapléjico y tengo baja visión. Mi oído es completamente normal.",0,1,0
+"Tengo un oído privilegiado, capto susurros en multitudes. Mi vista es normal y soy súper ágil.",1,2,2
+"Padezco sordera bilateral, no distingo ningún sonido. Mi visión es estándar y camino bien.",1,0,1
+"Tengo una vista sobrehumana y un oído normal. Sin embargo, estoy inmovilizado de cintura para abajo.",2,1,0
+"Mi visión es normal, aunque uso gafas. Mi audición es normal y tengo movilidad reducida.",1,1,0
+"Soy súper ágil, me muevo con una destreza fuera de lo común. Veo y escucho con normalidad.",1,1,2
+"Tengo ceguera total y sordera profunda, pero soy atleta de alto rendimiento.",0,0,2
+"Poseo visión sobrehumana y audición sobrehumana. Camino sin ninguna dificultad.",2,2,1
+"Tengo muy poca visión, oigo perfectamente y uso muletas para caminar.",0,1,0
+"Mi oído es normal, mi vista es normal y soy súper ágil.",1,1,2
+"Soy sordo profundo, tengo vista de águila y movilidad estándar.",2,0,1
+"Tengo baja visión severa, audición normal y movilidad normal.",0,1,1
+"Poseo hipermovilidad, puedo hacer movimientos imposibles. Veo y escucho con normalidad.",1,1,2
+"Tengo un oído normal, una vista normal y ando en silla de ruedas.",1,1,0
+"Padezco ceguera y sordera totales. Me desplazo en silla de ruedas motorizada.",0,0,0
+"Tengo una vista de águila y un oído normal. Camino sin dificultad.",2,1,1
+"Mi audición es normal, mi visión es normal y tengo parálisis parcial.",1,1,0
+"Soy ciego de nacimiento. Escucho el mínimo susurro y corro maratones.",0,2,2
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+"Padezco hipoacusia severa y uso silla de ruedas. Mi vista es estándar.",1,0,0
+"Tengo una agudeza visual extrema y un oído sobrehumano. Soy súper ágil.",2,2,2
+"Mi oído es normal, mi vista es normal, pero estoy postrado.",1,1,0
+"Soy sordo profundo, veo perfectamente y camino sin problemas.",1,0,1
+"Tengo un súper oído y una vista normal. Ando en silla de ruedas.",1,2,0
+"Poseo visión sobrehumana, audición normal y movilidad reducida.",2,1,0
+"Soy ciego total, tengo audición normal y soy atleta de alto rendimiento.",0,1,2
+"Tengo vista normal, súper oído y movilidad normal.",1,2,1
+"Padezco sordera profunda, vista sobrehumana y movilidad normal.",2,0,1
+"Tengo baja visión, oído normal y movilidad reducida.",0,1,0
+"Soy parapléjico, tengo vista de águila y oído normal.",2,1,0
+"Tengo audición nula, visión normal y soy súper ágil.",1,0,2
+"Poseo un oído privilegiado, vista normal y movilidad estándar.",1,2,1
+"Tengo ceguera total, sordera profunda y movilidad normal.",0,0,1
+"Soy súper ágil, tengo vista normal y oído normal.",1,1,2
+"Tengo visión normal, audición nula y ando en silla de ruedas.",1,0,0
+"Padezco baja visión severa, súper oído y movilidad normal.",0,2,1
+"Tengo vista sobrehumana, oído normal y soy atleta de alto rendimiento.",2,1,2
+"Soy sordo profundo, ciego total y tengo movilidad normal.",0,0,1
+"Tengo un oído normal, vista normal y uso prótesis en las piernas.",1,1,0
+"Poseo audición sobrehumana, visión normal y movilidad normal.",1,2,1
+"Tengo vista de águila, oído normal y movilidad reducida.",2,1,0
+"Soy ciego de nacimiento, tengo súper oído y soy súper ágil.",0,2,2
+"Tengo visión normal, oído normal y estoy inmovilizado.",1,1,0
+"Padezco sordera bilateral, vista normal y movilidad normal.",1,0,1
+"Tengo un oído normal, vista sobrehumana y movilidad normal.",2,1,1
+"Soy atleta de alto rendimiento, tengo vista normal y oído normal.",1,1,2
+"Tengo muy poca visión, audición normal y movilidad normal.",0,1,1
+"Poseo visión sobrehumana, audición normal y movilidad normal.",2,1,1
+"Tengo audición normal, vista normal y movilidad reducida severa.",1,1,0
+"Soy sordo profundo, tengo vista normal y soy súper ágil.",1,0,2
+"Tengo vista normal, oído sobrehumano y movilidad normal.",1,2,1
+"Padezco ceguera total, audición normal y movilidad reducida.",0,1,0
+"Tengo visión normal, audición normal y soy atleta de alto rendimiento.",1,1,2
+"Soy parapléjico, tengo vista normal y oído normal.",1,1,0
+"Tengo un súper oído, vista normal y soy súper ágil.",1,2,2
+"Poseo visión de águila, oído normal y movilidad normal.",2,1,1
+"Tengo baja visión, súper oído y movilidad reducida.",0,2,0
+"Soy ciego total, tengo oído normal y soy atleta de alto rendimiento.",0,1,2
+"Tengo visión normal, audición nula y movilidad normal.",1,0,1
+"Padezco hipoacusia severa, vista sobrehumana y movilidad normal.",2,0,1
+"Tengo un oído normal, vista normal y uso muletas.",1,1,0
+"Soy súper ágil, tengo vista sobrehumana y oído normal.",2,1,2
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+"Poseo audición normal, vista normal y movilidad sobrehumana.",1,1,2
+"Tengo ceguera total, audición sobrehumana y movilidad normal.",0,2,1
+"Soy sordo profundo, tengo vista normal y movilidad reducida.",1,0,0
+"Tengo vista de águila, oído sobrehumano y movilidad normal.",2,2,1
+"Padezco baja visión severa, oído normal y soy súper ágil.",0,1,2
+"Tengo visión normal, audición normal y ando en silla de ruedas.",1,1,0
+"Poseo un oído privilegiado, vista normal y movilidad normal.",1,2,1
+"Soy ciego de nacimiento, tengo oído normal y movilidad normal.",0,1,1
+"Tengo visión sobrehumana, audición normal y soy súper ágil.",2,1,2
+"Padezco sordera profunda, vista normal y movilidad normal.",1,0,1
+  "Tengo visión normal, oído normal y movilidad normal.",1,1,1
+"Soy ciego total, tengo súper oído y movilidad normal.",0,2,1
+"Padezco sordera profunda, tengo vista de águila y soy súper ágil.",2,0,2
+"Tengo baja visión, audición normal y ando en silla de ruedas.",0,1,0
+"Poseo visión sobrehumana, oído normal y movilidad reducida.",2,1,0
+"Soy parapléjico, tengo audición normal y vista normal.",1,1,0
+"Tengo un súper oído, vista normal y movilidad normal.",1,2,1
+"Padezco ceguera total, oído normal y soy atleta de alto rendimiento.",0,1,2
+"Tengo visión normal, audición nula y movilidad normal.",1,0,1
+"Soy súper ágil, tengo vista normal y oído sobrehumano.",1,2,2
+"Tengo vista de águila, oído normal y movilidad normal.",2,1,1
+"Padezco hipoacusia severa, vista normal y movilidad reducida.",1,0,0
+"Tengo un oído normal, vista sobrehumana y soy súper ágil.",2,1,2
+"Soy ciego de nacimiento, tengo audición normal y movilidad normal.",0,1,1
+"Tengo visión normal, oído normal y estoy inmovilizado.",1,1,0
+"Poseo audición sobrehumana, vista normal y movilidad normal.",1,2,1
+"Tengo baja visión severa, oído normal y movilidad normal.",0,1,1
+"Soy sordo profundo, tengo vista normal y soy atleta de alto rendimiento.",1,0,2
+"Tengo visión sobrehumana, oído sobrehumano y movilidad normal.",2,2,1
+"Padezco ceguera total, audición normal y movilidad reducida.",0,1,0
+"Tengo un oído normal, vista normal y movilidad normal.",1,1,1
+"Soy súper ágil, tengo vista sobrehumana y oído normal.",2,1,2
+"Tengo visión normal, audición normal y ando en silla de ruedas.",1,1,0
+"Poseo visión de águila, oído normal y soy atleta de alto rendimiento.",2,1,2
+"Tengo un súper oído, vista normal y movilidad reducida.",1,2,0
+"Soy ciego total, tengo oído normal y movilidad normal.",0,1,1
+"Tengo visión normal, oído normal y movilidad sobrehumana.",1,1,2
+"Padezco sordera bilateral, vista normal y movilidad normal.",1,0,1
+"Tengo audición normal, vista normal y movilidad reducida.",1,1,0
+"Soy parapléjico, tengo vista sobrehumana y oído normal.",2,1,0
+"Tengo visión normal, audición sobrehumana y movilidad normal.",1,2,1
+"Poseo un oído privilegiado, vista normal y soy súper ágil.",1,2,2
+"Tengo baja visión, oído normal y movilidad normal.",0,1,1
+"Soy sordo profundo, tengo vista de águila y movilidad normal.",2,0,1
+"Tengo visión sobrehumana, oído normal y movilidad normal.",2,1,1
+"Padezco ceguera total, audición sobrehumana y soy súper ágil.",0,2,2
+"Tengo un oído normal, vista normal y uso prótesis en las piernas.",1,1,0
+"Soy atleta de alto rendimiento, tengo vista normal y oído normal.",1,1,2
+"Tengo visión normal, audición nula y movilidad reducida.",1,0,0
+"Poseo audición sobrehumana, vista sobrehumana y movilidad normal.",2,2,1
+"Tengo un súper oído, vista normal y movilidad normal.",1,2,1
+"Soy ciego de nacimiento, tengo oído normal y soy súper ágil.",0,1,2
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+"Padezco hipoacusia severa, vista normal y movilidad normal.",1,0,1
+"Tengo vista de águila, oído sobrehumano y movilidad reducida.",2,2,0
+"Soy súper ágil, tengo vista normal y oído normal.",1,1,2
+"Tengo visión normal, audición normal y estoy postrado.",1,1,0
+"Poseo visión sobrehumana, oído normal y soy atleta de alto rendimiento.",2,1,2
+"Tengo baja visión severa, oído sobrehumano y movilidad normal.",0,2,1
+"Soy sordo profundo, tengo vista normal y movilidad normal.",1,0,1
+"Tengo un oído normal, vista normal y movilidad sobrehumana.",1,1,2
+"Padezco ceguera total, audición normal y ando en silla de ruedas.",0,1,0
+"Tengo visión normal, oído sobrehumano y movilidad reducida.",1,2,0
+"Soy parapléjico, tengo audición sobrehumana y vista normal.",1,2,0
+"Tengo un súper oído, vista sobrehumana y movilidad normal.",2,2,1
+"Poseo visión de águila, oído normal y movilidad normal.",2,1,1
+"Tengo visión normal, audición normal y soy súper ágil.",1,1,2
+"Soy ciego total, tengo oído sobrehumano y movilidad normal.",0,2,1
+"Tengo baja visión, audición normal y movilidad reducida.",0,1,0
+"Padezco sordera profunda, vista sobrehumana y soy súper ágil.",2,0,2
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+"Poseo audición normal, vista de águila y movilidad normal.",2,1,1
+"Tengo un oído normal, vista normal y uso muletas.",1,1,0
+"Soy súper ágil, tengo vista normal y oído normal.",1,1,2
+"Tengo visión sobrehumana, audición normal y movilidad normal.",2,1,1
+"Padezco ceguera total, oído normal y movilidad normal.",0,1,1
+"Tengo audición sobrehumana, vista normal y movilidad normal.",1,2,1
+"Soy sordo profundo, tengo vista normal y movilidad reducida.",1,0,0
+"Tengo visión normal, oído normal y soy atleta de alto rendimiento.",1,1,2
+"Poseo un oído privilegiado, vista sobrehumana y movilidad normal.",2,2,1
+"Tengo baja visión severa, oído normal y movilidad normal.",0,1,1
+"Soy ciego de nacimiento, tengo audición normal y soy súper ágil.",0,1,2
+"Tengo visión normal, oído normal y ando en silla de ruedas.",1,1,0
+"Padezco hipoacusia severa, vista sobrehumana y movilidad normal.",2,0,1
+"Tengo un súper oído, vista normal y movilidad sobrehumana.",1,2,2
+"Soy parapléjico, tengo vista normal y oído sobrehumano.",1,2,0
+"Tengo visión de águila, audición normal y movilidad normal.",2,1,1
+"Poseo visión normal, oído normal y movilidad normal.",1,1,1
+"Tengo audición nula, vista normal y movilidad normal.",1,0,1
+"Soy súper ágil, tengo vista normal y oído sobrehumano.",1,2,2
+"Tengo visión normal, oído normal y movilidad reducida.",1,1,0
+"Padezco ceguera total, audición sobrehumana y movilidad normal.",0,2,1
+"Tengo un oído normal, vista de águila y movilidad normal.",2,1,1
+"Soy ciego de nacimiento, tengo oído normal y movilidad reducida.",0,1,0
+"Tengo visión sobrehumana, audición sobrehumana y movilidad normal.",2,2,1
+"Poseo audición normal, vista normal y soy atleta de alto rendimiento.",1,1,2
+"Tengo un súper oído, vista normal y movilidad normal.",1,2,1
+"Soy sordo profundo, tengo vista normal y movilidad normal.",1,0,1
+"Tengo visión normal, oído normal y movilidad sobrehumana.",1,1,2
+"Padezco baja visión, audición normal y movilidad normal.",0,1,1
+"Tengo audición sobrehumana, vista normal y soy súper ágil.",1,2,2
+"Soy parapléjico, tengo vista normal y oído normal.",1,1,0
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+"Poseo visión de águila, oído normal y movilidad reducida.",2,1,0
+"Tengo un oído normal, vista normal y estoy inmovilizado.",1,1,0
+"Soy ciego total, tengo audición normal y movilidad normal.",0,1,1
+"Tengo visión normal, oído sobrehumano y movilidad normal.",1,2,1
+"Padezco sordera profunda, vista normal y soy súper ágil.",1,0,2
+"Tengo un oído normal, vista sobrehumana y movilidad normal.",2,1,1
+  "Soy ciego de nacimiento, no veo nada pero escucho perfectamente y camino sin problemas.",0,1,1
+"Tengo vista de águila, oído normal y ando en silla de ruedas.",2,1,0
+"Padezco sordera profunda, vista sobrehumana y soy atleta de alto rendimiento.",2,0,2
+"Uso gafas para leer, escucho bien y mi movilidad es completamente normal.",1,1,1
+"Tengo baja visión severa, oído normal y movilidad reducida.",0,1,0
+"Poseo un súper oído, vista normal y movilidad normal.",1,2,1
+"Soy parapléjico, vista normal y audición normal.",1,1,0
+"Tengo visión sobrehumana, oído normal y soy súper ágil.",2,1,2
+"Padezco ceguera total, audición normal y movilidad normal.",0,1,1
+"Tengo audición nula, vista normal y movilidad normal.",1,0,1
+"Soy súper ágil, vista normal y oído normal.",1,1,2
+"Tengo vista normal, oído normal y movilidad reducida severa.",1,1,0
+"Poseo audición sobrehumana, vista normal y movilidad normal.",1,2,1
+"Tengo baja visión, oído normal y movilidad normal.",0,1,1
+"Soy ciego total, oído sobrehumano y movilidad normal.",0,2,1
+"Tengo visión de águila, audición normal y movilidad normal.",2,1,1
+"Padezco sordera bilateral, vista normal y movilidad normal.",1,0,1
+"Tengo un oído normal, vista normal y soy atleta de alto rendimiento.",1,1,2
+"Soy parapléjico, vista sobrehumana y oído normal.",2,1,0
+"Tengo visión normal, audición sobrehumana y movilidad reducida.",1,2,0
+"Poseo visión sobrehumana, oído sobrehumano y movilidad normal.",2,2,1
+"Tengo un súper oído, vista normal y movilidad reducida.",1,2,0
+"Soy ciego de nacimiento, audición normal y movilidad normal.",0,1,1
+"Tengo vista normal, oído normal y movilidad sobrehumana.",1,1,2
+"Padezco hipoacusia severa, vista normal y movilidad normal.",1,0,1
+"Tengo audición normal, vista de águila y movilidad normal.",2,1,1
+"Soy súper ágil, vista normal y oído sobrehumano.",1,2,2
+"Tengo visión normal, oído normal y ando en silla de ruedas.",1,1,0
+"Poseo un oído privilegiado, vista normal y movilidad normal.",1,2,1
+"Tengo baja visión severa, oído sobrehumano y movilidad normal.",0,2,1
+"Soy ciego total, audición normal y movilidad reducida.",0,1,0
+"Tengo visión sobrehumana, oído normal y movilidad normal.",2,1,1
+"Padezco sordera profunda, vista normal y movilidad reducida.",1,0,0
+"Tengo un oído normal, vista normal y movilidad normal.",1,1,1
+"Soy atleta de alto rendimiento, vista normal y oído normal.",1,1,2
+"Tengo visión normal, audición nula y movilidad normal.",1,0,1
+"Poseo audición sobrehumana, vista sobrehumana y movilidad normal.",2,2,1
+"Tengo un súper oído, vista normal y movilidad normal.",1,2,1
+"Soy ciego de nacimiento, oído normal y soy súper ágil.",0,1,2
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+"Padezco ceguera total, audición sobrehumana y movilidad normal.",0,2,1
+"Tengo vista de águila, oído normal y movilidad reducida.",2,1,0
+"Soy sordo profundo, vista normal y movilidad normal.",1,0,1
+"Tengo visión normal, oído sobrehumano y movilidad normal.",1,2,1
+"Poseo visión de águila, oído normal y soy súper ágil.",2,1,2
+"Tengo baja visión, audición normal y movilidad normal.",0,1,1
+"Soy parapléjico, vista normal y oído sobrehumano.",1,2,0
+"Tengo un oído normal, vista sobrehumana y movilidad normal.",2,1,1
+"Padezco sordera profunda, vista de águila y movilidad normal.",2,0,1
+"Tengo visión normal, audición normal y estoy postrado.",1,1,0
+"Poseo audición normal, vista normal y movilidad sobrehumana.",1,1,2
+"Soy ciego total, oído normal y movilidad normal.",0,1,1
+"Tengo visión sobrehumana, audición normal y soy súper ágil.",2,1,2
+"Padezco hipoacusia severa, vista sobrehumana y movilidad normal.",2,0,1
+"Tengo un súper oído, vista normal y movilidad sobrehumana.",1,2,2
+"Soy súper ágil, vista sobrehumana y oído normal.",2,1,2
+"Tengo visión normal, oído normal y movilidad reducida.",1,1,0
+"Poseo un oído privilegiado, vista normal y soy súper ágil.",1,2,2
+"Tengo baja visión severa, oído normal y movilidad normal.",0,1,1
+"Soy sordo profundo, vista normal y soy atleta de alto rendimiento.",1,0,2
+"Tengo visión normal, audición sobrehumana y movilidad normal.",1,2,1
+"Padezco ceguera total, audición normal y movilidad normal.",0,1,1
+"Tengo un oído normal, vista normal y uso muletas.",1,1,0
+"Soy ciego de nacimiento, audición sobrehumana y movilidad normal.",0,2,1
+"Tengo visión de águila, oído normal y movilidad normal.",2,1,1
+"Poseo audición sobrehumana, vista normal y movilidad reducida.",1,2,0
+"Tengo visión normal, oído normal y soy súper ágil.",1,1,2
+"Soy parapléjico, vista normal y oído normal.",1,1,0
+"Tengo un súper oído, vista sobrehumana y movilidad normal.",2,2,1
+"Padezco sordera bilateral, vista sobrehumana y movilidad normal.",2,0,1
+"Tengo visión normal, audición normal y ando en silla de ruedas.",1,1,0
+"Poseo visión sobrehumana, oído normal y movilidad normal.",2,1,1
+"Soy ciego total, oído normal y soy súper ágil.",0,1,2
+"Tengo baja visión, audición normal y movilidad reducida.",0,1,0
+"Padezco hipoacusia severa, vista normal y soy súper ágil.",1,0,2
+"Tengo un oído normal, vista normal y movilidad normal.",1,1,1
+"Soy súper ágil, vista normal y oído normal.",1,1,2
+"Tengo visión normal, oído sobrehumano y movilidad normal.",1,2,1
+"Poseo audición normal, vista de águila y movilidad normal.",2,1,1
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+"Soy ciego de nacimiento, oído normal y movilidad reducida.",0,1,0
+"Tengo vista sobrehumana, audición sobrehumana y movilidad normal.",2,2,1
+"Padezco sordera profunda, vista normal y movilidad normal.",1,0,1
+"Tengo un oído normal, vista normal y estoy inmovilizado.",1,1,0
+"Poseo un oído privilegiado, vista normal y movilidad normal.",1,2,1
+"Soy parapléjico, vista sobrehumana y oído sobrehumano.",2,2,0
+"Tengo visión normal, audición nula y movilidad normal.",1,0,1
+"Padezco ceguera total, oído normal y movilidad normal.",0,1,1
+"Tengo visión de águila, oído normal y soy atleta de alto rendimiento.",2,1,2
+"Soy súper ágil, vista normal y oído sobrehumano.",1,2,2
+"Tengo un oído normal, vista sobrehumana y movilidad normal.",2,1,1
+"Poseo audición sobrehumana, vista normal y movilidad normal.",1,2,1
+"Tengo visión normal, oído normal y movilidad reducida severa.",1,1,0
+"Soy ciego total, audición normal y soy súper ágil.",0,1,2
+"Tengo baja visión severa, oído normal y movilidad normal.",0,1,1
+"Padezco sordera bilateral, vista normal y soy atleta de alto rendimiento.",1,0,2
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+  "Soy ciego total, escucho perfectamente y camino sin dificultad.",0,1,1
+"Tengo vista de águila, oído normal y uso silla de ruedas.",2,1,0
+"Padezco sordera profunda, vista sobrehumana y soy atleta.",2,0,2
+"Uso gafas para leer, oigo bien y me muevo con normalidad.",1,1,1
+"Tengo baja visión severa, oído normal y movilidad reducida.",0,1,0
+"Poseo súper oído, vista normal y movilidad normal.",1,2,1
+"Soy parapléjico, veo bien y escucho bien.",1,1,0
+"Tengo visión sobrehumana, oído normal y soy muy ágil.",2,1,2
+"Padezco ceguera total, oído normal y camino sin problemas.",0,1,1
+"Tengo audición nula, veo bien y me muevo con normalidad.",1,0,1
+"Soy súper ágil, veo bien y escucho bien.",1,1,2
+"Tengo vista normal, oído normal y movilidad reducida.",1,1,0
+"Poseo audición sobrehumana, vista normal y movilidad normal.",1,2,1
+"Tengo baja visión, oído normal y movilidad normal.",0,1,1
+"Soy ciego total, súper oído y movilidad normal.",0,2,1
+"Tengo vista de águila, audición normal y movilidad normal.",2,1,1
+"Padezco sordera bilateral, veo bien y camino bien.",1,0,1
+"Tengo oído normal, vista normal y soy atleta.",1,1,2
+"Soy parapléjico, vista sobrehumana y oído normal.",2,1,0
+"Tengo visión normal, audición sobrehumana y movilidad reducida.",1,2,0
+"Poseo visión sobrehumana, oído sobrehumano y movilidad normal.",2,2,1
+"Tengo súper oído, vista normal y movilidad reducida.",1,2,0
+"Soy ciego de nacimiento, oído normal y movilidad normal.",0,1,1
+"Tengo vista normal, oído normal y movilidad sobrehumana.",1,1,2
+"Padezco hipoacusia severa, veo bien y camino bien.",1,0,1
+"Tengo audición normal, vista de águila y movilidad normal.",2,1,1
+"Soy súper ágil, veo bien y tengo súper oído.",1,2,2
+"Tengo visión normal, oído normal y ando en silla de ruedas.",1,1,0
+"Poseo un oído privilegiado, veo bien y me muevo bien.",1,2,1
+"Tengo baja visión severa, súper oído y movilidad normal.",0,2,1
+"Soy ciego total, oído normal y movilidad reducida.",0,1,0
+"Tengo visión sobrehumana, oído normal y movilidad normal.",2,1,1
+"Padezco sordera profunda, veo bien y movilidad reducida.",1,0,0
+"Tengo oído normal, vista normal y movilidad normal.",1,1,1
+"Soy atleta de alto rendimiento, veo bien y escucho bien.",1,1,2
+"Tengo visión normal, audición nula y movilidad normal.",1,0,1
+"Poseo audición sobrehumana, vista sobrehumana y movilidad normal.",2,2,1
+"Tengo súper oído, vista normal y movilidad normal.",1,2,1
+"Soy ciego de nacimiento, oído normal y soy súper ágil.",0,1,2
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+"Padezco ceguera total, audición sobrehumana y movilidad normal.",0,2,1
+"Tengo vista de águila, oído normal y movilidad reducida.",2,1,0
+"Soy sordo profundo, veo bien y camino bien.",1,0,1
+"Tengo visión normal, oído sobrehumano y movilidad normal.",1,2,1
+"Poseo visión de águila, oído normal y soy súper ágil.",2,1,2
+"Tengo baja visión, audición normal y movilidad normal.",0,1,1
+"Soy parapléjico, veo bien y tengo súper oído.",1,2,0
+"Tengo oído normal, vista sobrehumana y movilidad normal.",2,1,1
+"Padezco sordera profunda, vista de águila y movilidad normal.",2,0,1
+"Tengo visión normal, audición normal y estoy postrado.",1,1,0
+"Poseo audición normal, vista normal y movilidad sobrehumana.",1,1,2
+"Soy ciego total, oído normal y movilidad normal.",0,1,1
+"Tengo visión sobrehumana, audición normal y soy súper ágil.",2,1,2
+"Padezco hipoacusia severa, vista sobrehumana y movilidad normal.",2,0,1
+"Tengo súper oído, vista normal y movilidad sobrehumana.",1,2,2
+"Soy súper ágil, vista sobrehumana y oído normal.",2,1,2
+"Tengo visión normal, oído normal y movilidad reducida.",1,1,0
+"Poseo un oído privilegiado, vista normal y soy súper ágil.",1,2,2
+"Tengo baja visión severa, oído normal y movilidad normal.",0,1,1
+"Soy sordo profundo, veo bien y soy atleta.",1,0,2
+"Tengo visión normal, audición sobrehumana y movilidad normal.",1,2,1
+"Padezco ceguera total, audición normal y movilidad normal.",0,1,1
+"Tengo oído normal, vista normal y uso muletas.",1,1,0
+"Soy ciego de nacimiento, audición sobrehumana y movilidad normal.",0,2,1
+"Tengo visión de águila, oído normal y movilidad normal.",2,1,1
+"Poseo audición sobrehumana, vista normal y movilidad reducida.",1,2,0
+"Tengo visión normal, oído normal y soy súper ágil.",1,1,2
+"Soy parapléjico, veo bien y escucho bien.",1,1,0
+"Tengo súper oído, vista sobrehumana y movilidad normal.",2,2,1
+"Padezco sordera bilateral, vista sobrehumana y movilidad normal.",2,0,1
+"Tengo visión normal, audición normal y ando en silla de ruedas.",1,1,0
+"Poseo visión sobrehumana, oído normal y movilidad normal.",2,1,1
+"Soy ciego total, oído normal y soy súper ágil.",0,1,2
+"Tengo baja visión, audición normal y movilidad reducida.",0,1,0
+"Padezco hipoacusia severa, veo bien y soy súper ágil.",1,0,2
+"Tengo oído normal, vista normal y movilidad normal.",1,1,1
+"Soy súper ágil, veo bien y escucho bien.",1,1,2
+"Tengo visión normal, oído sobrehumano y movilidad normal.",1,2,1
+"Poseo audición normal, vista de águila y movilidad normal.",2,1,1
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+"Soy ciego de nacimiento, oído normal y movilidad reducida.",0,1,0
+"Tengo vista sobrehumana, audición sobrehumana y movilidad normal.",2,2,1
+"Padezco sordera profunda, veo bien y camino bien.",1,0,1
+"Tengo oído normal, vista normal y estoy inmovilizado.",1,1,0
+"Poseo un oído privilegiado, veo bien y me muevo bien.",1,2,1
+"Soy parapléjico, vista sobrehumana y oído sobrehumano.",2,2,0
+"Tengo visión normal, audición nula y movilidad normal.",1,0,1
+"Padezco ceguera total, oído normal y movilidad normal.",0,1,1
+"Tengo visión de águila, oído normal y soy atleta.",2,1,2
+"Soy súper ágil, veo bien y tengo súper oído.",1,2,2
+"Tengo oído normal, vista sobrehumana y movilidad normal.",2,1,1
+"Poseo audición sobrehumana, vista normal y movilidad normal.",1,2,1
+"Tengo visión normal, oído normal y movilidad reducida severa.",1,1,0
+"Soy ciego total, audición normal y soy súper ágil.",0,1,2
+"Tengo baja visión severa, oído normal y movilidad normal.",0,1,1
+"Padezco sordera bilateral, veo bien y soy atleta.",1,0,2
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+"Soy ciego desde pequeño, pero escucho perfectamente y me desplazo sin ayuda.",0,1,1
+"Tengo visión de águila, oído normal y ando en silla de ruedas.",2,1,0
+"Padezco sordera profunda, tengo vista sobrehumana y corro maratones.",2,0,2
+"Uso gafas para leer, escucho bien y camino con total normalidad.",1,1,1
+"Tengo baja visión severa, oído normal y uso muletas para caminar.",0,1,0
+"Poseo un súper oído, veo bien y mi movilidad es estándar.",1,2,1
+"Soy parapléjico, veo correctamente y escucho con normalidad.",1,1,0
+"Tengo visión sobrehumana, oído normal y soy increíblemente ágil.",2,1,2
+"Padezco ceguera total, audición normal y camino sin problemas.",0,1,1
+"Tengo audición nula, veo bien y me muevo con normalidad.",1,0,1
+"Soy súper ágil, veo bien y escucho bien.",1,1,2
+"Tengo vista normal, oído normal y movilidad reducida.",1,1,0
+"Poseo audición sobrehumana, vista normal y movilidad normal.",1,2,1
+"Tengo baja visión, oído normal y movilidad normal.",0,1,1
+"Soy ciego total, tengo súper oído y movilidad normal.",0,2,1
+"Tengo vista de águila, audición normal y movilidad normal.",2,1,1
+"Padezco sordera bilateral, veo bien y camino bien.",1,0,1
+"Tengo oído normal, vista normal y soy atleta.",1,1,2
+"Soy parapléjico, vista sobrehumana y oído normal.",2,1,0
+"Tengo visión normal, audición sobrehumana y movilidad reducida.",1,2,0
+"Poseo visión sobrehumana, oído sobrehumano y movilidad normal.",2,2,1
+"Tengo súper oído, vista normal y movilidad reducida.",1,2,0
+"Soy ciego de nacimiento, oído normal y movilidad normal.",0,1,1
+"Tengo vista normal, oído normal y movilidad sobrehumana.",1,1,2
+"Padezco hipoacusia severa, veo bien y camino bien.",1,0,1
+"Tengo audición normal, vista de águila y movilidad normal.",2,1,1
+"Soy súper ágil, veo bien y tengo súper oído.",1,2,2
+"Tengo visión normal, oído normal y ando en silla de ruedas.",1,1,0
+"Poseo un oído privilegiado, veo bien y me muevo bien.",1,2,1
+"Tengo baja visión severa, súper oído y movilidad normal.",0,2,1
+"Soy ciego total, oído normal y movilidad reducida.",0,1,0
+"Tengo visión sobrehumana, oído normal y movilidad normal.",2,1,1
+"Padezco sordera profunda, veo bien y movilidad reducida.",1,0,0
+"Tengo oído normal, vista normal y movilidad normal.",1,1,1
+"Soy atleta de alto rendimiento, veo bien y escucho bien.",1,1,2
+"Tengo visión normal, audición nula y movilidad normal.",1,0,1
+"Poseo audición sobrehumana, vista sobrehumana y movilidad normal.",2,2,1
+"Tengo súper oído, vista normal y movilidad normal.",1,2,1
+"Soy ciego de nacimiento, oído normal y soy súper ágil.",0,1,2
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+"Padezco ceguera total, audición sobrehumana y movilidad normal.",0,2,1
+"Tengo vista de águila, oído normal y movilidad reducida.",2,1,0
+"Soy sordo profundo, veo bien y camino bien.",1,0,1
+"Tengo visión normal, oído sobrehumano y movilidad normal.",1,2,1
+"Poseo visión de águila, oído normal y soy súper ágil.",2,1,2
+"Tengo baja visión, audición normal y movilidad normal.",0,1,1
+"Soy parapléjico, veo bien y tengo súper oído.",1,2,0
+"Tengo oído normal, vista sobrehumana y movilidad normal.",2,1,1
+"Padezco sordera profunda, vista de águila y movilidad normal.",2,0,1
+"Tengo visión normal, audición normal y estoy postrado.",1,1,0
+"Poseo audición normal, vista normal y movilidad sobrehumana.",1,1,2
+"Soy ciego total, oído normal y movilidad normal.",0,1,1
+"Tengo visión sobrehumana, audición normal y soy súper ágil.",2,1,2
+"Padezco hipoacusia severa, vista sobrehumana y movilidad normal.",2,0,1
+"Tengo súper oído, vista normal y movilidad sobrehumana.",1,2,2
+"Soy súper ágil, vista sobrehumana y oído normal.",2,1,2
+"Tengo visión normal, oído normal y movilidad reducida.",1,1,0
+"Poseo un oído privilegiado, vista normal y soy súper ágil.",1,2,2
+"Tengo baja visión severa, oído normal y movilidad normal.",0,1,1
+"Soy sordo profundo, veo bien y soy atleta.",1,0,2
+"Tengo visión normal, audición sobrehumana y movilidad normal.",1,2,1
+"Padezco ceguera total, audición normal y movilidad normal.",0,1,1
+"Tengo oído normal, vista normal y uso muletas.",1,1,0
+"Soy ciego de nacimiento, audición sobrehumana y movilidad normal.",0,2,1
+"Tengo visión de águila, oído normal y movilidad normal.",2,1,1
+"Poseo audición sobrehumana, vista normal y movilidad reducida.",1,2,0
+"Tengo visión normal, oído normal y soy súper ágil.",1,1,2
+"Soy parapléjico, veo bien y escucho bien.",1,1,0
+"Tengo súper oído, vista sobrehumana y movilidad normal.",2,2,1
+"Padezco sordera bilateral, vista sobrehumana y movilidad normal.",2,0,1
+"Tengo visión normal, audición normal y ando en silla de ruedas.",1,1,0
+"Poseo visión sobrehumana, oído normal y movilidad normal.",2,1,1
+"Soy ciego total, oído normal y soy súper ágil.",0,1,2
+"Tengo baja visión, audición normal y movilidad reducida.",0,1,0
+"Padezco hipoacusia severa, veo bien y soy súper ágil.",1,0,2
+"Tengo oído normal, vista normal y movilidad normal.",1,1,1
+"Soy súper ágil, veo bien y escucho bien.",1,1,2
+"Tengo visión normal, oído sobrehumano y movilidad normal.",1,2,1
+"Poseo audición normal, vista de águila y movilidad normal.",2,1,1
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+"Soy ciego de nacimiento, oído normal y movilidad reducida.",0,1,0
+"Tengo vista sobrehumana, audición sobrehumana y movilidad normal.",2,2,1
+"Padezco sordera profunda, veo bien y camino bien.",1,0,1
+"Tengo oído normal, vista normal y estoy inmovilizado.",1,1,0
+"Poseo un oído privilegiado, veo bien y me muevo bien.",1,2,1
+"Soy parapléjico, vista sobrehumana y oído sobrehumano.",2,2,0
+"Tengo visión normal, audición nula y movilidad normal.",1,0,1
+"Padezco ceguera total, oído normal y movilidad normal.",0,1,1
+"Tengo visión de águila, oído normal y soy atleta.",2,1,2
+"Soy súper ágil, veo bien y tengo súper oído.",1,2,2
+"Tengo oído normal, vista sobrehumana y movilidad normal.",2,1,1
+"Poseo audición sobrehumana, vista normal y movilidad normal.",1,2,1
+"Tengo visión normal, oído normal y movilidad reducida severa.",1,1,0
+"Soy ciego total, audición normal y soy súper ágil.",0,1,2
+"Tengo baja visión severa, oído normal y movilidad normal.",0,1,1
+"Padezco sordera bilateral, veo bien y soy atleta.",1,0,2
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+  "Soy ciego de nacimiento, oigo perfectamente y camino sin ayuda.",0,1,1
+"Tengo vista de águila, oído normal y ando en silla de ruedas.",2,1,0
+"Padezco sordera profunda, vista sobrehumana y soy atleta.",2,0,2
+"Uso gafas para leer, escucho bien y camino normalmente.",1,1,1
+"Tengo baja visión severa, oído normal y movilidad reducida.",0,1,0
+"Poseo súper oído, vista normal y movilidad normal.",1,2,1
+"Soy parapléjico, veo bien y escucho bien.",1,1,0
+"Tengo visión sobrehumana, oído normal y soy muy ágil.",2,1,2
+"Padezco ceguera total, oído normal y camino sin problemas.",0,1,1
+"Tengo audición nula, veo bien y me muevo con normalidad.",1,0,1
+"Soy súper ágil, veo bien y escucho bien.",1,1,2
+"Tengo vista normal, oído normal y movilidad reducida.",1,1,0
+"Poseo audición sobrehumana, vista normal y movilidad normal.",1,2,1
+"Tengo baja visión, oído normal y movilidad normal.",0,1,1
+"Soy ciego total, súper oído y movilidad normal.",0,2,1
+"Tengo vista de águila, audición normal y movilidad normal.",2,1,1
+"Padezco sordera bilateral, veo bien y camino bien.",1,0,1
+"Tengo oído normal, vista normal y soy atleta.",1,1,2
+"Soy parapléjico, vista sobrehumana y oído normal.",2,1,0
+"Tengo visión normal, audición sobrehumana y movilidad reducida.",1,2,0
+"Poseo visión sobrehumana, oído sobrehumano y movilidad normal.",2,2,1
+"Tengo súper oído, vista normal y movilidad reducida.",1,2,0
+"Soy ciego de nacimiento, oído normal y movilidad normal.",0,1,1
+"Tengo vista normal, oído normal y movilidad sobrehumana.",1,1,2
+"Padezco hipoacusia severa, veo bien y camino bien.",1,0,1
+"Tengo audición normal, vista de águila y movilidad normal.",2,1,1
+"Soy súper ágil, veo bien y tengo súper oído.",1,2,2
+"Tengo visión normal, oído normal y ando en silla de ruedas.",1,1,0
+"Poseo un oído privilegiado, veo bien y me muevo bien.",1,2,1
+"Tengo baja visión severa, súper oído y movilidad normal.",0,2,1
+"Soy ciego total, oído normal y movilidad reducida.",0,1,0
+"Tengo visión sobrehumana, oído normal y movilidad normal.",2,1,1
+"Padezco sordera profunda, veo bien y movilidad reducida.",1,0,0
+"Tengo oído normal, vista normal y movilidad normal.",1,1,1
+"Soy atleta de alto rendimiento, veo bien y escucho bien.",1,1,2
+"Tengo visión normal, audición nula y movilidad normal.",1,0,1
+"Poseo audición sobrehumana, vista sobrehumana y movilidad normal.",2,2,1
+"Tengo súper oído, vista normal y movilidad normal.",1,2,1
+"Soy ciego de nacimiento, oído normal y soy súper ágil.",0,1,2
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+"Padezco ceguera total, audición sobrehumana y movilidad normal.",0,2,1
+"Tengo vista de águila, oído normal y movilidad reducida.",2,1,0
+"Soy sordo profundo, veo bien y camino bien.",1,0,1
+"Tengo visión normal, oído sobrehumano y movilidad normal.",1,2,1
+"Poseo visión de águila, oído normal y soy súper ágil.",2,1,2
+"Tengo baja visión, audición normal y movilidad normal.",0,1,1
+"Soy parapléjico, veo bien y tengo súper oído.",1,2,0
+"Tengo oído normal, vista sobrehumana y movilidad normal.",2,1,1
+"Padezco sordera profunda, vista de águila y movilidad normal.",2,0,1
+"Tengo visión normal, audición normal y estoy postrado.",1,1,0
+"Poseo audición normal, vista normal y movilidad sobrehumana.",1,1,2
+"Soy ciego total, oído normal y movilidad normal.",0,1,1
+"Tengo visión sobrehumana, audición normal y soy súper ágil.",2,1,2
+"Padezco hipoacusia severa, vista sobrehumana y movilidad normal.",2,0,1
+"Tengo súper oído, vista normal y movilidad sobrehumana.",1,2,2
+"Soy súper ágil, vista sobrehumana y oído normal.",2,1,2
+"Tengo visión normal, oído normal y movilidad reducida.",1,1,0
+"Poseo un oído privilegiado, vista normal y soy súper ágil.",1,2,2
+"Tengo baja visión severa, oído normal y movilidad normal.",0,1,1
+"Soy sordo profundo, veo bien y soy atleta.",1,0,2
+"Tengo visión normal, audición sobrehumana y movilidad normal.",1,2,1
+"Padezco ceguera total, audición normal y movilidad normal.",0,1,1
+"Tengo oído normal, vista normal y uso muletas.",1,1,0
+"Soy ciego de nacimiento, audición sobrehumana y movilidad normal.",0,2,1
+"Tengo visión de águila, oído normal y movilidad normal.",2,1,1
+"Poseo audición sobrehumana, vista normal y movilidad reducida.",1,2,0
+"Tengo visión normal, oído normal y soy súper ágil.",1,1,2
+"Soy parapléjico, veo bien y escucho bien.",1,1,0
+"Tengo súper oído, vista sobrehumana y movilidad normal.",2,2,1
+"Padezco sordera bilateral, vista sobrehumana y movilidad normal.",2,0,1
+"Tengo visión normal, audición normal y ando en silla de ruedas.",1,1,0
+"Poseo visión sobrehumana, oído normal y movilidad normal.",2,1,1
+"Soy ciego total, oído normal y soy súper ágil.",0,1,2
+"Tengo baja visión, audición normal y movilidad reducida.",0,1,0
+"Padezco hipoacusia severa, veo bien y soy súper ágil.",1,0,2
+"Tengo oído normal, vista normal y movilidad normal.",1,1,1
+"Soy súper ágil, veo bien y escucho bien.",1,1,2
+"Tengo visión normal, oído sobrehumano y movilidad normal.",1,2,1
+"Poseo audición normal, vista de águila y movilidad normal.",2,1,1
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+"Soy ciego de nacimiento, oído normal y movilidad reducida.",0,1,0
+"Tengo vista sobrehumana, audición sobrehumana y movilidad normal.",2,2,1
+"Padezco sordera profunda, veo bien y camino bien.",1,0,1
+"Tengo oído normal, vista normal y estoy inmovilizado.",1,1,0
+"Poseo un oído privilegiado, veo bien y me muevo bien.",1,2,1
+"Soy parapléjico, vista sobrehumana y oído sobrehumano.",2,2,0
+"Tengo visión normal, audición nula y movilidad normal.",1,0,1
+"Padezco ceguera total, oído normal y movilidad normal.",0,1,1
+"Tengo visión de águila, oído normal y soy atleta.",2,1,2
+"Soy súper ágil, veo bien y tengo súper oído.",1,2,2
+"Tengo oído normal, vista sobrehumana y movilidad normal.",2,1,1
+"Poseo audición sobrehumana, vista normal y movilidad normal.",1,2,1
+"Tengo visión normal, oído normal y movilidad reducida severa.",1,1,0
+"Soy ciego total, audición normal y soy súper ágil.",0,1,2
+"Tengo baja visión severa, oído normal y movilidad normal.",0,1,1
+"Padezco sordera bilateral, veo bien y soy atleta.",1,0,2
+"Tengo visión normal, oído normal y movilidad normal.",1,1,1
+"Tengo un oído normal, vista normal y movilidad normal.",1,1,1
