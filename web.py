@@ -6,7 +6,10 @@ from sklearn.pipeline import make_pipeline
 
 @st.cache_resource
 def modelo():
-    data = pd.read_csv("dataset.csv")
+    data = pd.read_csv("dataset.csv", on_bad_lines='skip', engine='python')
+    
+    data.columns = data.columns.str.strip()
+    
     X = data["texto"]
     
     vista = make_pipeline(TfidfVectorizer(), LogisticRegression())
@@ -27,13 +30,12 @@ texto = st.text_area("Describete:")
 
 if st.button("Submit"):
     if not texto.strip():
-        st.warning("No lo dejes  vacio")
+        st.warning("No lo dejes vacio")
     else:
         output = pd.DataFrame([{
             "vista": vista.predict([texto])[0],
             "oido": oido.predict([texto])[0],
             "movilidad": movilidad.predict([texto])[0]
         }])
-
-        st.table(ouput)
+        st.table(output)
         st.write("De momento bien, ¿no?")
