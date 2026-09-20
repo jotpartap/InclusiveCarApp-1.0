@@ -12,13 +12,20 @@ def modelo():
     
     X = data["texto"]
     
-    vista = make_pipeline(TfidfVectorizer(), LogisticRegression())
-    oido = make_pipeline(TfidfVectorizer(), LogisticRegression())
-    movilidad = make_pipeline(TfidfVectorizer(), LogisticRegression())
+    vista = Pipeline([
+        ('tfidf', TfidfVectorizer()),
+        ('clf', LogisticRegression())
+    ]).fit(X, data["vista"])
 
-    vista.fit(X, data["vista"])
-    oido.fit(X, data["oido"])
-    movilidad.fit(X, data["movilidad"])
+    oido = Pipeline([
+        ('tfidf', TfidfVectorizer()),
+        ('clf', LogisticRegression())
+    ]).fit(X, data["oido"])
+
+    movilidad = Pipeline([
+        ('tfidf', TfidfVectorizer()),
+        ('clf', LogisticRegression())
+    ]).fit(X, data["movilidad"])
 
     return vista, oido, movilidad
 
