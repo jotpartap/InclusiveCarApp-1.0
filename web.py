@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-from sklearn.pipeline import make_pipeline
+from sklearn.pipeline import Pipeline
 
 @st.cache_resource
 def modelo():
