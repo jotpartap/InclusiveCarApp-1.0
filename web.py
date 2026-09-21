@@ -30,7 +30,7 @@ def modelo():
 
 vista, oido, movilidad = modelo()
 
-st.title("Selecciona tus propiedads")
+st.title("Selecciona tus propiedades")
 
 tab1, tab2 = st.tabs(["Modo Deslizador", "Modo Texto"])
 
