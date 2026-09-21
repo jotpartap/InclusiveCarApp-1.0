@@ -6,7 +6,7 @@ from streamlit_mic_recorder import speech_to_text
 
 @st.cache_resource
 def cargar_modelos():
-    encoder = SentenceTransformer('hiams/distiluse-base-multilingual-cased-v2')
+    encoder = SentenceTransformer('sentence-transformers/distiluse-base-multilingual-cased-v2')
     
     data = pd.read_csv("dataset.csv", on_bad_lines='skip', engine='python')
     data.columns = data.columns.str.strip()
