@@ -245,3 +245,6 @@ with tab2:
         else:
             m_res, o_res, v_res = predecir_texto(texto)
             mostrar_canales(m_res, o_res, v_res)
+
+st.divider()
+st.caption("Autor: Jotpartap Singh - GitHub: [https://github.com/jotpartap/inclusiveCar]")
