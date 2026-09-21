@@ -9,40 +9,42 @@ expresiones = {
             "veo todo muy borroso", "uso baston para ciegos", "no veo en absoluto",
             "me duelen los ojos", "me duelen los ojos permanentemente", "tengo dolor ocular",
             "me duele el ojo izquierdo", "me duele el ojo derecho", "me duelen los ojos al mirar",
-            "he perdido el ojo izquierdo", "he perdido el ojo derecho", "soy tuerto", 
+            "he perdido el ojo izquierdo", "he perdido el ojo derecho", 
             "tengo dolor constante en los ojos", "mis ojos estan inflamados y duelen",
             "siento dolor en los ojos", "no soporto abrir los ojos del dolor", "estoy ciego",
-            "ceguera absoluta", "tengo problemas en la vista", "perdi la vista", "perdi los ojos"
+            "ceguera absoluta", "tengo problemas en la vista", "perdi la vista", "perdi los ojos",
+            "tengo una vista de mierda"
         ],
         1: [
             "veo bien", "mi vista es normal", "uso gafas para leer", "tengo vision normal",
             "veo perfectamente", "sin problemas de vista", "llevo lentillas y veo bien",
-            "veo lo necesario", "mi agudeza visual es promedio", "no tengo problemas oculares"
+            "veo lo necesario", "mi agudeza visual es promedio", "no tengo problemas oculares",
+            "tengo vista de halcón", "tengo vista de aguila"
         ],
         2: [
             "tengo fotofobia", "me molesta mucho la luz", "tengo hipersensibilidad visual",
             "la luz me deslumbra demasiado", "tengo hipersensibilidad a la luz",
             "veo destellos constantemente", "los brillos me hacen daño en los ojos",
             "tengo sensibilidad extrema a la luz", "no soporto las luces brillantes",
-            "veo como un aguila", "vista de aguila", "super vision", "hiper vision"
+            "super vision", "hiper vision"
         ]
     },
     "oido": {
         0: [
             "soy sordo", "no oigo nada", "tengo sordera profunda", "oigo muy mal",
             "tengo muy poca audicion", "no escucho nada", "tengo audicion nula",
-            "escucho todo muy apagado", "uso lenguaje de senas", "no escucho en absoluto",
-            "tengo un tapon", "tengo sordera"
+            "escucho todo muy apagado", "uso lenguaje de señas", "no escucho en absoluto",
+            "tengo un tapon", "tengo sordera",
         ],
         1: [
             "oigo bien", "mi oido es normal", "escucho perfectamente", "tengo audicion normal",
-            "sin problemas de oido", "escucho las conversaciones sin problema", "oigo lo normal"
+            "sin problemas de oido", "escucho las conversaciones sin problema", "oigo lo normal", 
         ],
         2: [
             "tengo hiperacusia", "me molestan mucho los ruidos", "tengo hipersensibilidad auditiva",
             "escucho los ruidos demasiado fuertes", "los sonidos agudos me dan dolor de cabeza",
             "tengo hipersensibilidad al ruido", "no soporto el volumen alto",
-            "tengo un oido demasiado sensible", "los ruidos fuertes me aturden", "oido muy fino", "super oido"
+            "tengo un oido demasiado sensible", "los ruidos fuertes me aturden", "oido muy fino", "super oido", "oido demasiado fino"
         ]
     },
     "movilidad": {
@@ -51,7 +53,7 @@ expresiones = {
             "tengo movilidad muy reducida", "ando con muletas", "no puedo mover las piernas",
             "estoy inmovilizado", "me cuesta mucho caminar", "tengo problemas al caminar",
             "tengo dificultad para andar", "camino muy lento", "soy muy lento caminando",
-            "no me puedo mover"
+            "no me puedo mover", "voy en baston"
         ],
         1: [
             "camino bien", "mi movilidad es normal", "puedo andar sin problemas", "camino perfectamente",
@@ -62,12 +64,12 @@ expresiones = {
             "tengo necesidad constante de moverme", "tengo tics motores",
             "me muevo compulsivamente", "tengo inquietud motora extrema",
             "tengo exceso de movimiento", "no puedo estar sentado mucho tiempo",
-            "tengo hipermovilidad", "super veloz"
+            "tengo hipermovilidad", "demasiado veloz"
         ]
     }
 }
 
-conectores = [", ", " y ", " pero ", " aunque ", ". ", " ademas ", ", por otro lado ", " - "]
+conectores = [", ",",", " y ", " pero ", " aunque ", ". ", " ademas ", ", por otro lado ", " - ", "tambien", "o sea"]
 
 filas = []
 
