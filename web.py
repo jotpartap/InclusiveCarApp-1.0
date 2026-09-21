@@ -100,7 +100,7 @@ with tab1:
     m_slider = st.slider("Movilidad", 0, 2, 1)
     
     if st.button("Submit", key="btn_slider"):
-        mostrar_canales_y_vector(m_slider, o_slider, v_slider)
+        mostrar_canales(m_slider, o_slider, v_slider)
 
 with tab2:
     texto = st.text_area("Descríbete:")
@@ -126,4 +126,4 @@ with tab3:
     
     if texto_transcrito:
         m_res, o_res, v_res = predecir_texto(texto_transcrito)
-        mostrar_canales_y_vector(m_res, o_res, v_res)
+        mostrar_canales(m_res, o_res, v_res)
