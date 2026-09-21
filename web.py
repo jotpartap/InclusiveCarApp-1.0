@@ -170,7 +170,6 @@ CANALES = {
         "gestual": "Máximo confort, cinturón envolvente relajante tipo \"abrazo\"."
     }
 }
-}
 
 @st.cache_resource
 def cargar_modelos():
