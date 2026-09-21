@@ -1,12 +1,8 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
-import io
-import speech_recognition as sr
-from pydub import AudioSegment
-from st_audiorec import st_audiorec
 from sentence_transformers import SentenceTransformer
 from sklearn.linear_model import LogisticRegression
+from streamlit_mic_recorder import speech_to_text
 
 @st.cache_resource
 def cargar_modelos():
@@ -67,29 +63,13 @@ with tab2:
             st.table(out)
 
 with tab3:
-    st.write("Presiona el botón para grabar tu voz:")
+    from streamlit_mic_recorder import speech_to_text
+
+with tab3:
+    st.subheader("Habla para describir tu situación")
     
-    audio_data = st_audiorec()
+    texto_transcrito = speech_to_text(language='es', use_container_width=True, key='STT')
     
-    if audio_data is not None:
-        try:
-            sound = AudioSegment.from_file(io.BytesIO(audio_data))
-            wav_io = io.BytesIO()
-            sound.export(wav_io, format="wav")
-            wav_io.seek(0)
-            
-            recognizer = sr.Recognizer()
-            with sr.AudioFile(wav_io) as source:
-                audio_file = recognizer.record(source)
-                
-            texto_transcrito = recognizer.recognize_google(audio_file, language="es-ES")
-            st.success(f"**Transcripción:** \"{texto_transcrito}\"")
-            
-            v_res, o_res, m_res = predecir_texto(texto_transcrito)
-            out = pd.DataFrame([{"vista": v_res, "oido": o_res, "movilidad": m_res}])
-            st.table(out)
-            
-        except sr.UnknownValueError:
-            st.error("No se pudo entender el audio. Por favor, habla más claro o intenta de nuevo.")
-        except Exception as e:
-            st.error(f"Error procesando el audio: {e}")
+    if texto_transcrito:
+        v_res, o_res, m_res = predecir_texto(texto_transcrito)
+        st.table(pd.DataFrame([{"vista": v_res, "oido": o_res, "movilidad": m_res}]))
