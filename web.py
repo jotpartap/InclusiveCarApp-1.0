@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 from sentence_transformers import SentenceTransformer
 from sklearn.linear_model import LogisticRegression
-from streamlit_mic_recorder import speech_to_text
 
 CANALES = {
     (0, 0, 0): {
@@ -225,9 +224,9 @@ def mostrar_canales(m, o, v):
     st.table(df_canales)
 
 
-st.title("InclusiveCarApp")
+st.title("InclusiveCarApp 1.0")
 
-tab1, tab2, tab3 = st.tabs(["Modo Deslizador", "Modo IA", "Modo Voz"])
+tab1, tab2 = st.tabs(["Modo Deslizador", "Modo IA",])
 
 with tab1:
     v_slider = st.slider("Vista", 0, 2, 1)
@@ -246,19 +245,3 @@ with tab2:
         else:
             m_res, o_res, v_res = predecir_texto(texto)
             mostrar_canales(m_res, o_res, v_res)
-
-with tab3:
-    st.subheader("Habla para describirte")
-    
-    texto_transcrito = speech_to_text(
-        language='es',
-        start_prompt='Grabar audio',
-        stop_prompt='Detener y procesar',
-        just_once=True,
-        use_container_width=True,
-        key='STT_REC'
-    )
-    
-    if texto_transcrito:
-        m_res, o_res, v_res = predecir_texto(texto_transcrito)
-        mostrar_canales(m_res, o_res, v_res)
