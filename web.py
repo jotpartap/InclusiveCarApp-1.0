@@ -5,35 +5,171 @@ from sklearn.linear_model import LogisticRegression
 from streamlit_mic_recorder import speech_to_text
 
 CANALES = {
-    (0, 0, 0): {"auditivo": "OFF (Ahorro)", "visual": "OFF (Ahorro)", "haptico": "MÁXIMO: Vibraciones codificadas, Braille al alcance de la silla.", "gestual": "Rampa ON. Reconocimiento de pequeños gestos manuales."},
-    (0, 0, 1): {"auditivo": "OFF (Ahorro)", "visual": "MÁXIMO: Lengua de signos, pictogramas grandes.", "haptico": "ALTO: Vibración para dirigir la mirada a la pantalla.", "gestual": "Rampa ON. Lee gestos de cabeza y manos."},
-    (0, 0, 2): {"auditivo": "OFF (Ahorro)", "visual": "OSCURO: Pictogramas muy claros sobre fondo negro mate.", "haptico": "ALTO: Suple la visión atenuada y la sordera.", "gestual": "Rampa ON. Reconocimiento de gestos."},
-    (0, 1, 0): {"auditivo": "OFF (Ahorro)", "visual": "MÁXIMO: Asistente de voz descriptivo total.", "haptico": "ALTO: Vibración de confirmación de acciones.", "gestual": "Rampa ON. Micrófonos a la altura de la silla."},
-    (0, 1, 1): {"auditivo": "NORMAL", "visual": "NORMAL: Pantallas bajas (al alcance de la silla).", "haptico": "NORMAL: Alertas de emergencia.", "gestual": "Rampa ON. Botones al alcance o gestos manuales."},
-    (0, 1, 2): {"auditivo": "NORMAL", "visual": "OSCURO: Pantallas atenuadas a la altura de la silla.", "haptico": "NORMAL: Asistente de voz cobra relevancia.", "gestual": "Rampa ON."},
-    (0, 2, 0): {"auditivo": "OFF (Ahorro)", "visual": "SUAVE: Voz susurrada + cancelación de ruido.", "haptico": "ALTO: Pasa a ser el canal principal.", "gestual": "Rampa ON."},
-    (0, 2, 1): {"auditivo": "NORMAL", "visual": "SUAVE: Cancelación activa de ruido ambiental.", "haptico": "NORMAL: Pantallas adaptadas en altura.", "gestual": "Rampa ON."},
-    (0, 2, 2): {"auditivo": "NORMAL", "visual": "SUAVE: Cancelación activa de ruido.", "haptico": "OSCURO: Ambiente de baja carga cognitiva.", "gestual": "Rampa ON. Conducción ultrasuave automática."},
+    (0, 0, 0): {
+        "auditivo": "OFF (Ahorro)",
+        "visual": "OFF (Ahorro)",
+        "haptico": "MÁXIMO: Vibraciones codificadas, Braille al alcance de la silla.",
+        "gestual": "Rampa ON. Reconocimiento de pequeños gestos manuales."
+    },
+    (0, 0, 1): {
+        "auditivo": "OFF (Ahorro)",
+        "visual": "MÁXIMO: Lengua de signos, pictogramas grandes.",
+        "haptico": "ALTO: Vibración para dirigir la mirada a la pantalla.",
+        "gestual": "Rampa ON. Lee gestos de cabeza y manos."
+    },
+    (0, 0, 2): {
+        "auditivo": "OFF (Ahorro)",
+        "visual": "OSCURO: Pictogramas muy claros sobre fondo negro mate.",
+        "haptico": "ALTO: Suple la visión atenuada y la sordera.",
+        "gestual": "Rampa ON. Reconocimiento de gestos."
+    },
+    (0, 1, 0): {
+        "auditivo": "MÁXIMO: Asistente de voz descriptivo total.",
+        "visual": "OFF (Ahorro)",
+        "haptico": "ALTO: Vibración de confirmación de acciones.",
+        "gestual": "Rampa ON. Micrófonos a la altura de la silla."
+    },
+    (0, 1, 1): {
+        "auditivo": "NORMAL",
+        "visual": "NORMAL: Pantallas bajas (al alcance de la silla).",
+        "haptico": "NORMAL: Alertas de emergencia.",
+        "gestual": "Rampa ON. Botones al alcance o gestos manuales."
+    },
+    (0, 1, 2): {
+        "auditivo": "NORMAL: Asistente de voz cobra relevancia.",
+        "visual": "OSCURO: Pantallas atenuadas a la altura de la silla.",
+        "haptico": "NORMAL",
+        "gestual": "Rampa ON."
+    },
+    (0, 2, 0): {
+        "auditivo": "SUAVE: Voz susurrada + cancelación de ruido.",
+        "visual": "OFF (Ahorro)",
+        "haptico": "ALTO: Pasa a ser el canal principal.",
+        "gestual": "Rampa ON."
+    },
+    (0, 2, 1): {
+        "auditivo": "SUAVE: Cancelación activa de ruido ambiental.",
+        "visual": "NORMAL: Pantallas adaptadas en altura.",
+        "haptico": "NORMAL",
+        "gestual": "Rampa ON."
+    },
+    (0, 2, 2): {
+        "auditivo": "SUAVE: Cancelación activa de ruido.",
+        "visual": "OSCURO: Ambiente de baja carga cognitiva.",
+        "haptico": "NORMAL",
+        "gestual": "Rampa ON. Conducción ultrasuave automática."
+    },
+    
+    (1, 0, 0): {
+        "auditivo": "OFF (Ahorro)",
+        "visual": "OFF (Ahorro)",
+        "haptico": "MÁXIMO: Guía táctil integral por todo el habitáculo.",
+        "gestual": "Estándar."
+    },
+    (1, 0, 1): {
+        "auditivo": "OFF (Ahorro)",
+        "visual": "MÁXIMO: Lengua de signos y alertas luminosas.",
+        "haptico": "ALTO: Vibración de llamada de atención.",
+        "gestual": "Estándar."
+    },
+    (1, 0, 2): {
+        "auditivo": "OFF (Ahorro)",
+        "visual": "OSCURO: Pictogramas claros de alto contraste.",
+        "haptico": "ALTO",
+        "gestual": "Estándar."
+    },
+    (1, 1, 0): {
+        "auditivo": "MÁXIMO: Asistente de voz descriptivo.",
+        "visual": "OFF (Ahorro)",
+        "haptico": "ALTO: Pulsera/asiento vibra al llegar.",
+        "gestual": "Estándar."
+    },
+    (1, 1, 1): {
+        "auditivo": "NORMAL",
+        "visual": "NORMAL",
+        "haptico": "NORMAL",
+        "gestual": "Estándar."
+    },
+    (1, 1, 2): {
+        "auditivo": "NORMAL",
+        "visual": "OSCURO: Cristales opacos por defecto.",
+        "haptico": "NORMAL",
+        "gestual": "Estándar."
+    },
+    (1, 2, 0): {
+        "auditivo": "SUAVE: Voz susurrada + cancelación de ruido.",
+        "visual": "OFF (Ahorro)",
+        "haptico": "ALTO: Pasa a ser el canal principal.",
+        "gestual": "Estándar."
+    },
+    (1, 2, 1): {
+        "auditivo": "SUAVE: Cancelación de ruido.",
+        "visual": "NORMAL",
+        "haptico": "NORMAL",
+        "gestual": "Estándar."
+    },
+    (1, 2, 2): {
+        "auditivo": "SUAVE: Cancelación de ruido.",
+        "visual": "OSCURO",
+        "haptico": "OFF",
+        "gestual": "Estándar."
+    },
 
-    (1, 0, 0): {"auditivo": "OFF (Ahorro)", "visual": "OFF (Ahorro)", "haptico": "MÁXIMO: Guía táctil integral por todo el habitáculo.", "gestual": "Estándar."},
-    (1, 0, 1): {"auditivo": "OFF (Ahorro)", "visual": "MÁXIMO: Lengua de signos y alertas luminosas.", "haptico": "ALTO: Vibración de llamada de atención.", "gestual": "Estándar."},
-    (1, 0, 2): {"auditivo": "OFF (Ahorro)", "visual": "OSCURO: Pictogramas claros de alto contraste.", "haptico": "ALTO", "gestual": "Estándar."},
-    (1, 1, 0): {"auditivo": "OFF (Ahorro)", "visual": "MÁXIMO: Asistente de voz descriptivo.", "haptico": "ALTO: Pulsera/asiento vibra al llegar.", "gestual": "Estándar."},
-    (1, 1, 1): {"auditivo": "NORMAL", "visual": "NORMAL", "haptico": "NORMAL", "gestual": "Estándar."},
-    (1, 1, 2): {"auditivo": "NORMAL", "visual": "OSCURO: Cristales opacos por defecto.", "haptico": "NORMAL", "gestual": "Estándar."},
-    (1, 2, 0): {"auditivo": "OFF (Ahorro)", "visual": "SUAVE: Voz susurrada + cancelación de ruido.", "haptico": "ALTO: Pasa a ser el canal principal.", "gestual": "Estándar."},
-    (1, 2, 1): {"auditivo": "NORMAL", "visual": "SUAVE: Cancelación de ruido.", "haptico": "NORMAL", "gestual": "Estándar."},
-    (1, 2, 2): {"auditivo": "OSCURO", "visual": "OFF", "haptico": "SUAVE: Cancelación de ruido.", "gestual": "Estándar."},
-
-    (2, 0, 0): {"auditivo": "OFF (Ahorro)", "visual": "OFF (Ahorro)", "haptico": "MODERADO: Vibraciones suaves para no sobreestimular.", "gestual": "Espacio amplio, cinturones adaptativos."},
-    (2, 0, 1): {"auditivo": "OFF (Ahorro)", "visual": "MINIMIZADO", "haptico": "MODERADO: Pictogramas grandes sin destellos estridentes.", "gestual": "Espacio libre para moverse con seguridad."},
-    (2, 0, 2): {"auditivo": "OFF (Ahorro)", "visual": "MINIMIZADO", "haptico": "OSCURO EXTREMO: Iluminación prácticamente nula.", "gestual": "Espacio adaptativo."},
-    (2, 1, 0): {"auditivo": "OFF (Ahorro)", "visual": "MODERADO: Voz calmada y clara.", "haptico": "MINIMIZADO: Solo alertas críticas.", "gestual": "Espacio libre, bloqueo seguro de puertas."},
-    (2, 1, 1): {"auditivo": "NORMAL", "visual": "MINIMIZADO", "haptico": "NORMAL: Juegos/distracciones en pantalla para relajar.", "gestual": "Máxima libertad de movimiento segura."},
-    (2, 1, 2): {"auditivo": "NORMAL", "visual": "OSCURO", "haptico": "OFF", "gestual": "Espacio amplio."},
-    (2, 2, 0): {"auditivo": "OFF (Ahorro)", "visual": "MUY SUAVE: Solo alertas vitales.", "haptico": "MINIMIZADO: Evitar sobrecarga sensorial.", "gestual": "Espacio libre, máximo aislamiento exterior."},
-    (2, 2, 1): {"auditivo": "OFF / SUAVE: Aislamiento total del ruido exterior (TEA).", "visual": "RELAX: Colores pastel, rutas suaves.", "haptico": "OFF: Cero vibraciones innecesarias.", "gestual": "Ambiente zen, sin bloqueos físicos restrictivos."},
-    (2, 2, 2): {"auditivo": "AISLAMIENTO: Silencio absoluto (ANC al máximo).", "visual": "OSCURO TOTAL: Cápsula de aislamiento visual.", "haptico": "OFF: Cero estímulos.", "gestual": "Máximo confort, cinturón envolvente relajante."}
+    (2, 0, 0): {
+        "auditivo": "OFF (Ahorro)",
+        "visual": "OFF (Ahorro)",
+        "haptico": "MODERADO: Vibraciones suaves para no sobreestimular.",
+        "gestual": "Espacio amplio, cinturones adaptativos."
+    },
+    (2, 0, 1): {
+        "auditivo": "OFF (Ahorro)",
+        "visual": "MINIMIZADO",
+        "haptico": "MODERADO: Pictogramas grandes sin destellos estridentes.",
+        "gestual": "Espacio libre para moverse con seguridad."
+    },
+    (2, 0, 2): {
+        "auditivo": "OFF (Ahorro)",
+        "visual": "MINIMIZADO",
+        "haptico": "OSCURO EXTREMO: Iluminación prácticamente nula.",
+        "gestual": "Espacio adaptativo."
+    },
+    (2, 1, 0): {
+        "auditivo": "MODERADO: Voz calmada y clara.",
+        "visual": "OFF (Ahorro)",
+        "haptico": "MINIMIZADO: Solo alertas críticas.",
+        "gestual": "Espacio libre, bloqueo seguro de puertas."
+    },
+    (2, 1, 1): {
+        "auditivo": "NORMAL",
+        "visual": "MINIMIZADO",
+        "haptico": "NORMAL: Juegos/distracciones en pantalla para relajar.",
+        "gestual": "Máxima libertad de movimiento segura."
+    },
+    (2, 1, 2): {
+        "auditivo": "NORMAL",
+        "visual": "OSCURO",
+        "haptico": "OFF",
+        "gestual": "Espacio amplio."
+    },
+    (2, 2, 0): {
+        "auditivo": "MUY SUAVE: Solo alertas vitales.",
+        "visual": "OFF (Ahorro)",
+        "haptico": "MINIMIZADO: Evitar sobrecarga sensorial.",
+        "gestual": "Espacio libre, máximo aislamiento exterior."
+    },
+    (2, 2, 1): {
+        "auditivo": "OFF / SUAVE: Aislamiento total del ruido exterior (TEA).",
+        "visual": "RELAX: Colores pastel, rutas suaves (sin curvas bruscas).",
+        "haptico": "OFF: Cero vibraciones innecesarias.",
+        "gestual": "Ambiente zen, sin bloqueos físicos restrictivos."
+    },
+    (2, 2, 2): {
+        "auditivo": "AISLAMIENTO: Silencio absoluto (ANC al máximo*).",
+        "visual": "OSCURO TOTAL: Cápsula de aislamiento visual.",
+        "haptico": "OFF: Cero estímulos.",
+        "gestual": "Máximo confort, cinturón envolvente relajante tipo \"abrazo\"."
+    }
+}
 }
 
 @st.cache_resource
