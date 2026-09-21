@@ -57,18 +57,22 @@ with tab2:
 
     VISTA = [
         "ciego", "ceguera", "veo", "vista", "ojo", "ojos", "gafas", "lentes", 
-        "lentillas", "mirar", "agudeza", "borroso", "luz", "luces", "sombras", "baston"
+        "lentillas", "mirar", "agudeza", "borroso", "luz", "luces", "sombras", "baston",
+        "fotofobia", "deslumbra", "brillos", "hipersensibilidad", "dolor", "duelen", "molestan",
+        "izquierdo", "derecho", "perdido", "perdi", "tuerto", "ocular", "inflamados"
     ]
 
     OIDO = [
         "sordo", "sordera", "oigo", "oido", "oidos", "escucho", "escuchar", 
-        "audicion", "audifono", "audifonos", "susurro", "susurros", "hipoacusia", "fino", "ruido", "ruidos"
+        "audicion", "audifono", "audifonos", "susurro", "susurros", "hipoacusia", "ruido", "ruidos",
+        "hiperacusia", "sensible", "molestan", "hipersensibilidad", "tapon", "sordomudo"
     ]
 
     MOVILIDAD = [
         "silla", "ruedas", "caminar", "andar", "mover", "moverme", "movilidad", 
-        "paralitico", "paraplejico", "agil", "atleta", "muletas", "piernas", "pie", 
-        "correr", "lento", "despacio", "tortuga", "postrado", "paso", "pasos"
+        "paralitico", "paraplejico", "agil", "muletas", "piernas", "pie", "pies",
+        "correr", "lento", "despacio", "tortuga", "postrado", "paso", "pasos",
+        "hiperactividad", "hiperactivo", "inquietud", "quieto", "tics", "cojo", "inmovilizado"
     ]
 
     def predecir(pipeline, texto_usuario, palabras_clave):
