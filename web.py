@@ -106,7 +106,7 @@ with tab2:
     texto = st.text_area("Descríbete:")
     
     if st.button("Submit", key="btn_texto"):
-        if not texto_input.strip():
+        if not texto.strip():
             st.warning("No lo dejes vació.")
         else:
             m_res, o_res, v_res = predecir_texto(texto_input)
