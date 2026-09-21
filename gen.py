@@ -84,7 +84,6 @@ for _ in range(6767):
         c2 = random.choice(conectores)
         frase = f"{txt_v}{c1}{txt_o}{c2}{txt_m}."
         filas.append({"texto": frase, "vista": v, "oido": o, "movilidad": m})
-
+    
 df = pd.DataFrame(filas).sample(frac=1).reset_index(drop=True)
 df.to_csv("dataset.csv", index=False, encoding="utf-8")
-print("Dataset enfocado en discapacidades e hipersensibilidades generado correctamente.")
