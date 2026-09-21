@@ -1,3 +1,7 @@
 streamlit
 pandas
 scikit-learn
+sentence-transformers
+SpeechRecognition
+pydub
+streamlit-audio-recorder
