@@ -223,6 +223,9 @@ def mostrar_canales(m, o, v):
     
     st.table(df_canales)
 
+
+st.title("InclusiveCarApp 1.0")
+
 tab1, tab2 = st.tabs(["Modo Deslizador", "Modo IA"])
 
 with tab1:
