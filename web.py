@@ -3,6 +3,23 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer
 from sklearn.linear_model import LogisticRegression
 
+if "modo_noche" not in st.session_state:
+    st.session_state.modo_noche = True
+
+col_title, col_btn = st.columns([0.85, 0.15])
+with col_title:
+    st.title("InclusiveCarApp 1.0")
+with col_btn:
+    btn_label = "🌙" if st.session_state.modo_noche else "☀️"
+    if st.button(btn_label, key="btn_tema"):
+        st.session_state.modo_noche = not st.session_state.modo_noche
+        st.rerun()
+
+if st.session_state.modo_noche:
+    st.markdown("<style>.stApp { background-color: #0f172a; color: #f8fafc; }</style>", unsafe_allow_html=True)
+else:
+    st.markdown("<style>.stApp { background-color: #ffffff; color: #000000; }</style>", unsafe_allow_html=True)
+
 CANALES = {
     (0, 0, 0): {
         "auditivo": "OFF (Ahorro)",
@@ -223,10 +240,7 @@ def mostrar_canales(m, o, v):
     
     st.table(df_canales)
 
-
-st.title("InclusiveCarApp 1.0")
-
-tab1, tab2 = st.tabs(["Modo Deslizador", "Modo IA",])
+tab1, tab2 = st.tabs(["Modo Deslizador", "Modo IA"])
 
 with tab1:
     v_slider = st.slider("Vista", 0, 2, 1)
