@@ -1,5 +1,6 @@
-import streamlit as st
-import pandas as pd
-from sentence_transformers import SentenceTransformer
-from sklearn.linear_model import LogisticRegression
-from streamlit_mic_recorder import speech_to_text
+streamlit
+pandas
+scikit-learn
+sentence-transformers
+streamlit-mic-recorder
+torch --extra-index-url https://download.pytorch.org/whl/cpu
