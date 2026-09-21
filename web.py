@@ -12,18 +12,18 @@ def modelo():
     X = data["texto"]
     
     vista = Pipeline([
-        ('tfidf', TfidfVectorizer()),
-        ('clf', LogisticRegression())
+        ('tfidf', TfidfVectorizer(ngram_range=(1, 2))),
+        ('clf', LogisticRegression(class_weight='balanced', max_iter=1000))
     ]).fit(X, data["vista"])
 
     oido = Pipeline([
-        ('tfidf', TfidfVectorizer()),
-        ('clf', LogisticRegression())
+        ('tfidf', TfidfVectorizer(ngram_range=(1, 2))),
+        ('clf', LogisticRegression(class_weight='balanced', max_iter=1000))
     ]).fit(X, data["oido"])
 
     movilidad = Pipeline([
-        ('tfidf', TfidfVectorizer()),
-        ('clf', LogisticRegression())
+        ('tfidf', TfidfVectorizer(ngram_range=(1, 2))),
+        ('clf', LogisticRegression(class_weight='balanced', max_iter=1000))
     ]).fit(X, data["movilidad"])
 
     return vista, oido, movilidad
