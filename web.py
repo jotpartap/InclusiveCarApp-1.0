@@ -1,99 +1,95 @@
 import streamlit as st
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
+import numpy as np
+import io
+import speech_recognition as sr
+from pydub import AudioSegment
+from st_audiorec import st_audiorec
+from sentence_transformers import SentenceTransformer
 from sklearn.linear_model import LogisticRegression
-from sklearn.pipeline import Pipeline
 
 @st.cache_resource
-def modelo():
+def cargar_modelos():
+    encoder = SentenceTransformer('hiams/distiluse-base-multilingual-cased-v2')
+    
     data = pd.read_csv("dataset.csv", on_bad_lines='skip', engine='python')
     data.columns = data.columns.str.strip()
     
-    X = data["texto"]
+    X_embeddings = encoder.encode(data["texto"].tolist(), show_progress_bar=False)
     
-    vista = Pipeline([
-        ('tfidf', TfidfVectorizer(ngram_range=(1, 2))),
-        ('clf', LogisticRegression(class_weight='balanced', max_iter=1000))
-    ]).fit(X, data["vista"])
+    clf_vista = LogisticRegression(C=10.0, class_weight='balanced', max_iter=1000)
+    clf_vista.fit(X_embeddings, data["vista"])
+    
+    clf_oido = LogisticRegression(C=10.0, class_weight='balanced', max_iter=1000)
+    clf_oido.fit(X_embeddings, data["oido"])
+    
+    clf_mov = LogisticRegression(C=10.0, class_weight='balanced', max_iter=1000)
+    clf_mov.fit(X_embeddings, data["movilidad"])
+    
+    return encoder, clf_vista, clf_oido, clf_mov
 
-    oido = Pipeline([
-        ('tfidf', TfidfVectorizer(ngram_range=(1, 2))),
-        ('clf', LogisticRegression(class_weight='balanced', max_iter=1000))
-    ]).fit(X, data["oido"])
+encoder, clf_vista, clf_oido, clf_mov = cargar_modelos()
 
-    movilidad = Pipeline([
-        ('tfidf', TfidfVectorizer(ngram_range=(1, 2))),
-        ('clf', LogisticRegression(class_weight='balanced', max_iter=1000))
-    ]).fit(X, data["movilidad"])
-
-    return vista, oido, movilidad
-
-vista, oido, movilidad = modelo()
+def predecir_texto(texto):
+    if not texto.strip():
+        return 1, 1, 1
+    
+    emb = encoder.encode([texto])
+    
+    v = clf_vista.predict(emb)[0]
+    o = clf_oido.predict(emb)[0]
+    m = clf_mov.predict(emb)[0]
+    
+    return v, o, m
 
 st.title("Selecciona tus propiedades")
 
-tab1, tab2 = st.tabs(["Modo Deslizador", "Modo Texto"])
+tab1, tab2, tab3 = st.tabs(["Modo Deslizador", "Modo Texto", "Modo Voz"])
 
 with tab1:
-    st.subheader("Ajusta tus valores manualmente")
+    v_slider = st.slider("Vista", 0, 2, 1)
+    o_slider = st.slider("Oído", 0, 2, 1)
+    m_slider = st.slider("Movilidad", 0, 2, 1)
     
-    v = st.slider("Vista", min_value=0, max_value=2, value=1)
-    o = st.slider("Oído", min_value=0, max_value=2, value=1)
-    m = st.slider("Movilidad", min_value=0, max_value=2, value=1)
-    
-    if st.button("Submit ", key="btn_slider"):
-        output_slider = pd.DataFrame([{
-            "vista": v,
-            "oido": o,
-            "movilidad": m
-        }])
-        st.table(output_slider)
-        st.write("De momento bien, ¿no?")
+    if st.button("Submit", key="btn_slider"):
+        out = pd.DataFrame([{"vista": v_slider, "oido": o_slider, "movilidad": m_slider}])
+        st.table(out)
 
 with tab2:
-    st.subheader("Describe tu situación")
+    texto_input = st.text_area("Descríbete:")
     
-    texto = st.text_area("Descríbete:")
-
-    VISTA = [
-        "ciego", "ceguera", "veo", "vista", "ojo", "ojos", "gafas", "lentes", 
-        "lentillas", "mirar", "agudeza", "borroso", "luz", "luces", "sombras", "baston",
-        "fotofobia", "deslumbra", "brillos", "hipersensibilidad", "dolor", "duelen", "molestan",
-        "izquierdo", "derecho", "perdido", "perdi", "tuerto", "ocular", "inflamados"
-    ]
-
-    OIDO = [
-        "sordo", "sordera", "oigo", "oido", "oidos", "escucho", "escuchar", 
-        "audicion", "audifono", "audifonos", "susurro", "susurros", "hipoacusia", "ruido", "ruidos",
-        "hiperacusia", "sensible", "molestan", "hipersensibilidad", "tapon", "sordomudo"
-    ]
-
-    MOVILIDAD = [
-        "silla", "ruedas", "caminar", "andar", "mover", "moverme", "movilidad", 
-        "paralitico", "paraplejico", "agil", "muletas", "piernas", "pie", "pies",
-        "correr", "lento", "despacio", "tortuga", "postrado", "paso", "pasos",
-        "hiperactividad", "hiperactivo", "inquietud", "quieto", "tics", "cojo", "inmovilizado"
-    ]
-
-    def predecir(pipeline, texto_usuario, palabras_clave):
-        txt = texto_usuario.lower()
-        if not any(palabra in txt for palabra in palabras_clave):
-            return 1
-        return pipeline.predict([texto_usuario])[0]
-
     if st.button("Submit", key="btn_texto"):
-        if not texto.strip():
-            st.warning("No lo dejes vacio")
+        if not texto_input.strip():
+            st.warning("Escribe algo antes de enviar.")
         else:
-            v_res = predecir(vista, texto, VISTA)
-            o_res = predecir(oido, texto, OIDO)
-            m_res = predecir(movilidad, texto, MOVILIDAD)
+            v_res, o_res, m_res = predecir_texto(texto_input)
+            out = pd.DataFrame([{"vista": v_res, "oido": o_res, "movilidad": m_res}])
+            st.table(out)
 
-            output_texto = pd.DataFrame([{
-                "vista": v_res,
-                "oido": o_res,
-                "movilidad": m_res
-            }])
+with tab3:
+    st.write("Presiona el botón para grabar tu voz:")
+    
+    audio_data = st_audiorec()
+    
+    if audio_data is not None:
+        try:
+            sound = AudioSegment.from_file(io.BytesIO(audio_data))
+            wav_io = io.BytesIO()
+            sound.export(wav_io, format="wav")
+            wav_io.seek(0)
             
-            st.table(output_texto)
-            st.write("De momento bien, ¿no?")
+            recognizer = sr.Recognizer()
+            with sr.AudioFile(wav_io) as source:
+                audio_file = recognizer.record(source)
+                
+            texto_transcrito = recognizer.recognize_google(audio_file, language="es-ES")
+            st.success(f"**Transcripción:** \"{texto_transcrito}\"")
+            
+            v_res, o_res, m_res = predecir_texto(texto_transcrito)
+            out = pd.DataFrame([{"vista": v_res, "oido": o_res, "movilidad": m_res}])
+            st.table(out)
+            
+        except sr.UnknownValueError:
+            st.error("No se pudo entender el audio. Por favor, habla más claro o intenta de nuevo.")
+        except Exception as e:
+            st.error(f"Error procesando el audio: {e}")
