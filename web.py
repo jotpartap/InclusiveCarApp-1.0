@@ -32,45 +32,64 @@ vista, oido, movilidad = modelo()
 
 st.title("Selecciona tus propiedades")
 
-texto = st.text_area("Describete:")
+tab1, tab2 = st.tabs(["Modo Deslizador", "Modo Texto"])
 
-VISTA = [
-    "ciego", "ceguera", "veo", "vista", "ojo", "ojos", "gafas", "lentes", 
-    "lentillas", "mirar", "agudeza", "borroso", "luz", "luces", "sombras", "baston"
-]
-
-OIDO = [
-    "sordo", "sordera", "oigo", "oido", "oidos", "escucho", "escuchar", 
-    "audicion", "audifono", "audifonos", "susurro", "susurros", "hipoacusia", "fino", "ruido", "ruidos"
-]
-
-MOVILIDAD = [
-    "silla", "ruedas", "caminar", "andar", "mover", "moverme", "movilidad", 
-    "paralitico", "paraplejico", "agil", "atleta", "muletas", "piernas", "pie", 
-    "correr", "lento", "despacio", "tortuga", "postrado", "paso", "pasos"
-]
-
-def predecir(pipeline, texto_usuario, palabras_clave):
-    txt = texto_usuario.lower()
+with tab1:
+    st.subheader("Ajusta tus valores manualmente")
     
-    if not any(palabra in txt for palabra in palabras_clave):
-        return 1
+    v = st.slider("Vista", min_value=0, max_value=2, value=1)
+    o = st.slider("Oído", min_value=0, max_value=2, value=1)
+    m = st.slider("Movilidad", min_value=0, max_value=2, value=1)
     
-    return pipeline.predict([texto_usuario])[0]
-
-if st.button("Submit"):
-    if not texto.strip():
-        st.warning("No lo dejes vacio")
-    else:
-        v_res = predecir(vista, texto, VISTA)
-        o_res = predecir(oido, texto, OIDO)
-        m_res = predecir(movilidad, texto, MOVILIDAD)
-
-        output = pd.DataFrame([{
-            "vista": v_res,
-            "oido": o_res,
-            "movilidad": m_res
+    if st.button("Submit ", key="btn_slider"):
+        output_slider = pd.DataFrame([{
+            "vista": v,
+            "oido": o,
+            "movilidad": m
         }])
-        
-        st.table(output)
+        st.table(output_slider)
         st.write("De momento bien, ¿no?")
+
+with tab2:
+    st.subheader("Describe tu situación")
+    
+    texto = st.text_area("Descríbete:")
+
+    VISTA = [
+        "ciego", "ceguera", "veo", "vista", "ojo", "ojos", "gafas", "lentes", 
+        "lentillas", "mirar", "agudeza", "borroso", "luz", "luces", "sombras", "baston"
+    ]
+
+    OIDO = [
+        "sordo", "sordera", "oigo", "oido", "oidos", "escucho", "escuchar", 
+        "audicion", "audifono", "audifonos", "susurro", "susurros", "hipoacusia", "fino", "ruido", "ruidos"
+    ]
+
+    MOVILIDAD = [
+        "silla", "ruedas", "caminar", "andar", "mover", "moverme", "movilidad", 
+        "paralitico", "paraplejico", "agil", "atleta", "muletas", "piernas", "pie", 
+        "correr", "lento", "despacio", "tortuga", "postrado", "paso", "pasos"
+    ]
+
+    def predecir(pipeline, texto_usuario, palabras_clave):
+        txt = texto_usuario.lower()
+        if not any(palabra in txt for palabra in palabras_clave):
+            return 1
+        return pipeline.predict([texto_usuario])[0]
+
+    if st.button("Submit", key="btn_texto"):
+        if not texto.strip():
+            st.warning("No lo dejes vacio")
+        else:
+            v_res = predecir(vista, texto, VISTA)
+            o_res = predecir(oido, texto, OIDO)
+            m_res = predecir(movilidad, texto, MOVILIDAD)
+
+            output_texto = pd.DataFrame([{
+                "vista": v_res,
+                "oido": o_res,
+                "movilidad": m_res
+            }])
+            
+            st.table(output_texto)
+            st.write("De momento bien, ¿no?")
