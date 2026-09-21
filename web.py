@@ -109,7 +109,7 @@ with tab2:
         if not texto.strip():
             st.warning("No lo dejes vació.")
         else:
-            m_res, o_res, v_res = predecir_texto(texto_input)
+            m_res, o_res, v_res = predecir_texto(texto)
             mostrar_canales(m_res, o_res, v_res)
 
 with tab3:
