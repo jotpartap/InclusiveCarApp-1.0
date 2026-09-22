@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas as p
+import pandas as pd
 from sentence_transformers import SentenceTransformer
 from sklearn.linear_model import LogisticRegression
 
@@ -224,7 +224,7 @@ def mostrar_canales(m, o, v):
     st.table(df_canales)
 
 
-st.title("InclusiveCarApp 1.0")
+st.title("InclusiveCarApp")
 
 tab1, tab2 = st.tabs(["Modo Deslizador", "Modo IA"])
 
