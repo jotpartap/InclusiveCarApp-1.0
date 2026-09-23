@@ -4,6 +4,7 @@ from sentence_transformers import SentenceTransformer
 from sklearn.linear_model import LogisticRegression
 
 CANALES = {
+    # --- MOVILIDAD: 0 ---
     (0, 0, 0): {
         "auditivo": "OFF (Ahorro)",
         "visual": "OFF (Ahorro)",
@@ -59,6 +60,7 @@ CANALES = {
         "gestual": "Rampa ON. Conducción ultrasuave automática."
     },
     
+    # --- MOVILIDAD: 1 ---
     (1, 0, 0): {
         "auditivo": "OFF (Ahorro)",
         "visual": "OFF (Ahorro)",
@@ -114,6 +116,7 @@ CANALES = {
         "gestual": "Estándar."
     },
 
+    # --- MOVILIDAD: 2 ---
     (2, 0, 0): {
         "auditivo": "OFF (Ahorro)",
         "visual": "OFF (Ahorro)",
@@ -166,7 +169,7 @@ CANALES = {
         "auditivo": "AISLAMIENTO: Silencio absoluto (ANC al máximo*).",
         "visual": "OSCURO TOTAL: Cápsula de aislamiento visual.",
         "haptico": "OFF: Cero estímulos.",
-        "gestual": "Máximo confort, cinturón envolvente relajante tipo \"abrazo\"."
+        "gestual": 'Máximo confort, cinturón envolvente relajante tipo "abrazo".'
     }
 }
 
@@ -223,6 +226,14 @@ def mostrar_canales(m, o, v):
     
     st.table(df_canales)
 
+def preprocesar_texto(texto):
+    signos = ".,;:!?¡¿"
+    
+    texto = texto.lower().strip()
+    texto = texto.rstrip(signos).strip()
+    texto = " ".join(texto.split())
+    
+    return texto
 
 st.title("InclusiveCarApp")
 
@@ -240,6 +251,7 @@ with tab2:
     texto = st.text_area("Descríbete:")
     
     if st.button("Submit", key="btn_texto"):
+        texto = preprocesar_texto(texto)
         if not texto.strip():
             st.warning("No lo dejes vació.")
         else:
