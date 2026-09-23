@@ -194,7 +194,7 @@ encoder, vista, oido, mov = cargar_modelos()
 
 def predecir_texto(texto, confianza=False):
     if not texto.strip():
-        if calcular_probabilidad:
+        if confianza:
             return (1, 1, 1), (0.0, 0.0, 0.0)
         return 1, 1, 1
     
@@ -204,7 +204,7 @@ def predecir_texto(texto, confianza=False):
     o = int(oido.predict(emb)[0])
     v = int(vista.predict(emb)[0])
 
-    if Confianza:
+    if confianza:
         m_conf = max(mov.predict_proba(emb)[0]) * 100
         o_conf = max(oido.predict_proba(emb)[0]) * 100
         v_conf = max(vista.predict_proba(emb)[0]) * 100
