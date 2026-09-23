@@ -193,6 +193,11 @@ def cargar_modelos():
 encoder, vista, oido, mov = cargar_modelos()
 
 def predecir_texto(texto, Confianza=False):
+    if not texto.strip():
+    if calcular_probabilidad:
+        return (1, 1, 1), (0.0, 0.0, 0.0)
+    return 1, 1, 1
+    
     emb = encoder.encode([texto])
 
     m = int(mov.predict(emb)[0])
