@@ -247,7 +247,7 @@ def preprocesar_texto(texto):
     
     return texto
 
-st.title("InclusiveCarApp")
+st.title("InclusiveCarApp 1.0")
 
 tab1, tab2 = st.tabs(["Modo Deslizador", "Modo IA"])
 
