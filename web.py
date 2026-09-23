@@ -4,7 +4,6 @@ from sentence_transformers import SentenceTransformer
 from sklearn.linear_model import LogisticRegression
 
 CANALES = {
-    # --- MOVILIDAD: 0 ---
     (0, 0, 0): {
         "auditivo": "OFF (Ahorro)",
         "visual": "OFF (Ahorro)",
@@ -60,7 +59,6 @@ CANALES = {
         "gestual": "Rampa ON. Conducción ultrasuave automática."
     },
     
-    # --- MOVILIDAD: 1 ---
     (1, 0, 0): {
         "auditivo": "OFF (Ahorro)",
         "visual": "OFF (Ahorro)",
@@ -116,7 +114,6 @@ CANALES = {
         "gestual": "Estándar."
     },
 
-    # --- MOVILIDAD: 2 ---
     (2, 0, 0): {
         "auditivo": "OFF (Ahorro)",
         "visual": "OFF (Ahorro)",
@@ -235,7 +232,7 @@ def preprocesar_texto(texto):
     
     return texto
 
-st.title("InclusiveCarApp")
+st.title("InclusiveCarApp 1.0")
 
 tab1, tab2 = st.tabs(["Modo Deslizador", "Modo IA"])
 
