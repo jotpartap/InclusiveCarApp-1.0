@@ -192,20 +192,30 @@ def cargar_modelos():
 
 encoder, vista, oido, mov = cargar_modelos()
 
-def predecir_texto(texto):
-    if not texto.strip():
-        return 1, 1, 1
-    
+def predecir_texto(texto, Confianza=False):
     emb = encoder.encode([texto])
-    
-    v = int(vista.predict(emb)[0])
-    o = int(oido.predict(emb)[0])
+
     m = int(mov.predict(emb)[0])
-    
+    o = int(oido.predict(emb)[0])
+    v = int(vista.predict(emb)[0])
+
+    if calcular_probabilidad:
+        m_conf = max(mov.predict_proba(emb)[0]) * 100
+        o_conf = max(oido.predict_proba(emb)[0]) * 100
+        v_conf = max(vista.predict_proba(emb)[0]) * 100
+        return (m, o, v), (m_conf, o_conf, v_conf)
+
     return m, o, v
 
-def mostrar_canales(m, o, v):
+def mostrar_canales(m, o, v, confianzas=None):
     st.markdown(f"### [M, O, V]: `[{m}, {o}, {v}]`")
+    
+    if confianzas is not None:
+        c_m, c_o, c_v = confianzas
+        col1, col2, col3 = st.columns(3)
+        col1.metric("Confianza Movilidad", f"{c_m:.2f}%")
+        col2.metric("Confianza Oído", f"{c_o:.2f}%")
+        col3.metric("Confianza Vista", f"{c_v:.2f}%")
     
     config = CANALES.get((m, o, v), {
         "auditivo": "Configuración estándar",
@@ -246,14 +256,19 @@ with tab1:
 
 with tab2:
     texto = st.text_area("Descríbete:")
+    mostrar_prob = st.toggle("Mostrar Confianza")
     
     if st.button("Submit", key="btn_texto"):
         texto = preprocesar_texto(texto)
         if not texto.strip():
-            st.warning("No lo dejes vació.")
+            st.warning("No lo dejes vacío.")
         else:
-            m_res, o_res, v_res = predecir_texto(texto)
-            mostrar_canales(m_res, o_res, v_res)
+            if mostrar_prob:
+                (m_res, o_res, v_res), confianzas = predecir_texto(texto, calcular_probabilidad=True)
+                mostrar_canales(m_res, o_res, v_res, confianzas=confianzas)
+            else:
+                m_res, o_res, v_res = predecir_texto(texto, calcular_probabilidad=False)
+                mostrar_canales(m_res, o_res, v_res)
 
 st.divider()
 st.caption("Autor: Jotpartap Singh - GitHub: [https://github.com/jotpartap/inclusiveCar]")
