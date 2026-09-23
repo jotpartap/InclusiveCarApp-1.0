@@ -249,7 +249,7 @@ def preprocesar_texto(texto):
 
 st.title("InclusiveCarApp 1.0")
 
-tab1, tab2 = st.tabs(["Modo Deslizadores", "Modo IA"])
+tab1, tab2 = st.tabs(["Modo Deslizador", "Modo IA"])
 
 with tab1:
     v_slider = st.slider("Vista", 0, 2, 1)
