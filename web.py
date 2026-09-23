@@ -192,11 +192,11 @@ def cargar_modelos():
 
 encoder, vista, oido, mov = cargar_modelos()
 
-def predecir_texto(texto, Confianza=False):
+def predecir_texto(texto, confianza=False):
     if not texto.strip():
-    if calcular_probabilidad:
-        return (1, 1, 1), (0.0, 0.0, 0.0)
-    return 1, 1, 1
+        if calcular_probabilidad:
+            return (1, 1, 1), (0.0, 0.0, 0.0)
+        return 1, 1, 1
     
     emb = encoder.encode([texto])
 
@@ -204,7 +204,7 @@ def predecir_texto(texto, Confianza=False):
     o = int(oido.predict(emb)[0])
     v = int(vista.predict(emb)[0])
 
-    if calcular_probabilidad:
+    if Confianza:
         m_conf = max(mov.predict_proba(emb)[0]) * 100
         o_conf = max(oido.predict_proba(emb)[0]) * 100
         v_conf = max(vista.predict_proba(emb)[0]) * 100
@@ -269,10 +269,10 @@ with tab2:
             st.warning("No lo dejes vacío.")
         else:
             if mostrar_prob:
-                (m_res, o_res, v_res), confianzas = predecir_texto(texto, calcular_probabilidad=True)
+                (m_res, o_res, v_res), confianzas = predecir_texto(texto, confianza=True)
                 mostrar_canales(m_res, o_res, v_res, confianzas=confianzas)
             else:
-                m_res, o_res, v_res = predecir_texto(texto, calcular_probabilidad=False)
+                m_res, o_res, v_res = predecir_texto(texto, confianza=False)
                 mostrar_canales(m_res, o_res, v_res)
 
 st.divider()
