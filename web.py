@@ -12,7 +12,7 @@ st.set_page_config(
 col_logo, col_titulo = st.columns([1, 5])
 
 with col_logo:
-    st.image("logo.png", width=100)
+    st.image("logo.jpeg", width=100)
 
 with col_titulo:
     st.title("InclusiveCarApp")
