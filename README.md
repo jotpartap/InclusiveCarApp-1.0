@@ -45,14 +45,14 @@
     Es el archivo principal y el nucleo de la app que lo organizamos en 3 partes: el diccionario con las tablas de la adaptación de los 4 canales, el modelo de IA y el desarollo web.
   - ### modelo de IA:
     El modelo de ML utiliza tecnicas de NLP, en especial Transformers/Embeddings. El Transformer que usamos es uno multilingue: 'distiluse-base-multilingual-cased-v2', y luego a partir de los embeddings usamos una regresion logistica para predecir cada elemento del vector [V, O, M].
-  - #### Desarollo Web:
+  - ### Desarollo Web:
     La app tiene como titulo InclusiveCarApp y dos pestañas: 'Modo Deslizador' y 'Modo IA' para cada modo. En el Modo Deslizador, hay 3 deslizadores que se pueden colocar en el valor que la queramos dar a cada elemento del vector y al clicar el boton 'Submit', nos devuelve en vector [V, O, M] y la reacción de cada canal según el diccionario 'CANALES'. En el Modo IA, hay una celda para escribir texto y, semejantemente al Modo Deslizador, al  clicar el boton Submit se nos devuelve la adaptación de cada canal de coche. La diferencia es que en este caso es el modelo de IA el que interpreta cual es el vector [V, O, M].
 
 - ## Conclusiones:
   Considero que la IA y todas las tecnologias deberian de ser una herramienta para lograr bienes comunes: la inclusivida, sostenibilidad... InclusiveCarApp, aunque no deja de ser a nivel tecnico una app minimalista, lo que busca es expressar eso, el buen uso de la tecnologia actual. Por eso considero que deberia de ser Open Source, al alcance de todas las personas. Muchas gracias por leer esto.
 
 - ## Autor:
-  Me llamo Jotpartap Singh, o simplemente Jot. Tengo 13 años y estudiante de ESO, pero, en especial, soy un freekie de las matematicas y de las tecnologias, en especial del fenómeno de la IA y los modelos de ML. 
+  Me llamo Jotpartap Singh, o simplemente Jot. Tengo 13 años y soy estudiante de ESO, pero, en especial, soy un freekie de las matematicas y de las tecnologias, en especial del fenómeno de la IA y los modelos de ML. 
 
 - ## Agradecimientos:
   Agradezco a Capgemini por organizar el Hackhaton Digital: Flow to the Future.
