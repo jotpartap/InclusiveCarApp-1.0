@@ -15,7 +15,7 @@ with col_logo:
     st.image("logo.jpeg", width=100)
 
 with col_titulo:
-    st.title("InclusiveCarApp")
+    st.title("InclusiveCarApp 1.0")
 
 CANALES = {
     (0, 0, 0): {
