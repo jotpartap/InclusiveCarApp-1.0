@@ -206,10 +206,8 @@ def cargar_modelos():
 
 encoder, vista, oido, mov = cargar_modelos()
 
-def predecir_texto(texto, confianza=False):
+def predecir_texto(texto):
     if not texto.strip():
-        if confianza:
-            return (1, 1, 1), (0.0, 0.0, 0.0)
         return 1, 1, 1
     
     emb = encoder.encode([texto])
@@ -218,23 +216,10 @@ def predecir_texto(texto, confianza=False):
     o = int(oido.predict(emb)[0])
     v = int(vista.predict(emb)[0])
 
-    if confianza:
-        m_conf = max(mov.predict_proba(emb)[0]) * 100
-        o_conf = max(oido.predict_proba(emb)[0]) * 100
-        v_conf = max(vista.predict_proba(emb)[0]) * 100
-        return (m, o, v), (m_conf, o_conf, v_conf)
-
     return m, o, v
 
-def mostrar_canales(m, o, v, confianzas=None):
+def mostrar_canales(m, o, v):
     st.markdown(f"### [M, O, V]: `[{m}, {o}, {v}]`")
-    
-    if confianzas is not None:
-        c_m, c_o, c_v = confianzas
-        col1, col2, col3 = st.columns(3)
-        col1.metric("Confianza Movilidad", f"{c_m:.2f}%")
-        col2.metric("Confianza Oído", f"{c_o:.2f}%")
-        col3.metric("Confianza Vista", f"{c_v:.2f}%")
     
     config = CANALES.get((m, o, v), {
         "auditivo": "Configuración estándar",
@@ -272,20 +257,26 @@ with tab1:
         mostrar_canales(m_slider, o_slider, v_slider)
 
 with tab2:
-    texto = st.text_area("Descríbete:")
-    mostrar_prob = st.toggle("Mostrar Confianza")
-    
-    if st.button("Submit", key="btn_texto"):
-        texto = preprocesar_texto(texto)
-        if not texto.strip():
-            st.warning("No lo dejes vacío.")
+    col_v, col_o, col_m = st.columns(3)
+    with col_v:
+        texto_vista = st.text_input("Vista", key="input_vista")
+    with col_o:
+        texto_oido = st.text_input("Oído", key="input_oido")
+    with col_m:
+        texto_mov = st.text_input("Movilidad", key="input_mov")
+        
+    if st.button("Submit", key="btn_tres_cajas"):
+        t_v = preprocesar_texto(texto_vista)
+        t_o = preprocesar_texto(texto_oido)
+        t_m = preprocesar_texto(texto_mov)
+        
+        if not t_v and not t_o and not t_m:
+            st.warning("No lo dejes vacio")
         else:
-            if mostrar_prob:
-                (m_res, o_res, v_res), confianzas = predecir_texto(texto, confianza=True)
-                mostrar_canales(m_res, o_res, v_res, confianzas=confianzas)
-            else:
-                m_res, o_res, v_res = predecir_texto(texto, confianza=False)
-                mostrar_canales(m_res, o_res, v_res)
-
+            v_res = int(vista.predict(encoder.encode([t_v]))[0]) if t_v else 1
+            o_res = int(oido.predict(encoder.encode([t_o]))[0]) if t_o else 1
+            m_res = int(mov.predict(encoder.encode([t_m]))[0]) if t_m else 1
+            
+            mostrar_canales(m_res, o_res, v_res)
 st.divider()
-st.caption("Autor: Jotpartap Singh - GitHub: [https://github.com/jotpartap/inclusiveCar]")
+st.caption("Autor: Jotpartap Singh - GitHub: [https://github.com/jotpartap/inclusiveCar](https://github.com/jotpartap/inclusiveCar)")
