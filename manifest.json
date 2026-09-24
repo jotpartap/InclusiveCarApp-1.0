@@ -1,0 +1,21 @@
+{
+  "name": "InclusiveCarApp",
+  "short_name": "InclusiveCar",
+  "start_url": "https://inclusivecar.streamlit.app/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FF4B4B",
+  "description": "Vehiculo Automático inclusivo",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/jotpartap/inclusiveCar/main/logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://raw.githubusercontent.com/jotpartap/inclusiveCar/main/logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
