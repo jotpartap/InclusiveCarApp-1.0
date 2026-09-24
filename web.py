@@ -2,23 +2,20 @@ import streamlit as st
 import pandas as pd
 from sentence_transformers import SentenceTransformer
 from sklearn.linear_model import LogisticRegression
-import streamlit.components.v1 as components
 
 st.set_page_config(
     page_title="InclusiveCarApp",
-    page_icon="logo.png",
+    page_icon="logo.jpeg",
     layout="wide"
 )
 
-pwa_meta = """
-<link rel="manifest" href="https://raw.githubusercontent.com/jotpartap/inclusiveCar/main/manifest.json">
-<meta name="theme-color" content="#FF4B4B">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="InclusiveCar">
-"""
-components.html(pwa_meta, height=0)
+col_logo, col_titulo = st.columns([1, 5])
+
+with col_logo:
+    st.image("logo.png", width=100)
+
+with col_titulo:
+    st.title("InclusiveCarApp")
 
 CANALES = {
     (0, 0, 0): {
@@ -263,8 +260,6 @@ def preprocesar_texto(texto):
     texto = " ".join(texto.split())
     
     return texto
-
-st.title("InclusiveCarApp 1.0")
 
 tab1, tab2 = st.tabs(["Modo Deslizador", "Modo IA"])
 
