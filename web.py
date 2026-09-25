@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import re
 from sentence_transformers import SentenceTransformer
 from sklearn.linear_model import LogisticRegression
 
@@ -238,13 +239,51 @@ def mostrar_canales(m, o, v):
     st.table(df_canales)
 
 def preprocesar_texto(texto):
-    signos = ".,;:!?¡¿"
-    
+    if not texto or not texto.strip():
+        return "", "", ""
+
     texto = texto.lower().strip()
-    texto = texto.rstrip(signos).strip()
-    texto = " ".join(texto.split())
-    
-    return texto
+    texto = " ".join(texto_limpio.split())
+
+    conectores = r'\b(?:y|e|o|u|pero|además|ademas|mientras|que|también|tambien)\b|[,;.:!?¡¿]'
+    fragmentos = [f.strip() for f in re.split(conectores, texto, flags=re.IGNORECASE) if f.strip()]
+
+    if not fragmentos:
+        fragmentos = [texto]
+
+    frag_m, frag_o, frag_v = [], [], []
+
+    for frag in fragmentos:
+        emb = encoder.encode([frag])
+
+        pred_m = int(mov.predict(emb)[0])
+        pred_o = int(oido.predict(emb)[0])
+        pred_v = int(vista.predict(emb)[0])
+
+        prob_m = max(mov.predict_proba(emb)[0])
+        prob_o = max(oido.predict_proba(emb)[0])
+        prob_v = max(vista.predict_proba(emb)[0])
+
+        puntuaciones = {
+            'mov': prob_m * 2.0 if pred_m != 1 else prob_m * 0.5,
+            'oido': prob_o * 2.0 if pred_o != 1 else prob_o * 0.5,
+            'vista': prob_v * 2.0 if pred_v != 1 else prob_v * 0.5
+        }
+
+        canal_ganador = max(puntuaciones, key=puntuaciones.get)
+
+        if canal_ganador == 'mov':
+            frag_m.append(frag)
+        elif canal_ganador == 'oido':
+            frag_o.append(frag)
+        else:
+            frag_v.append(frag)
+
+    t_m = " ".join(frag_m)
+    t_o = " ".join(frag_o)
+    t_v = " ".join(frag_v)
+
+    return t_m, t_o, t_v
 
 tab1, tab2 = st.tabs(["Modo Deslizador", "Modo IA"])
 
@@ -253,30 +292,23 @@ with tab1:
     o_slider = st.slider("Oído", 0, 2, 1)
     m_slider = st.slider("Movilidad", 0, 2, 1)
     
-    if st.button("Submit", key="btn_slider"):
+    if st.button("Submit", key="deslizador"):
         mostrar_canales(m_slider, o_slider, v_slider)
 
 with tab2:
-    col_v, col_o, col_m = st.columns(3)
-    with col_v:
-        texto_vista = st.text_input("Vista", key="input_vista")
-    with col_o:
-        texto_oido = st.text_input("Oído", key="input_oido")
-    with col_m:
-        texto_mov = st.text_input("Movilidad", key="input_mov")
-        
-    if st.button("Submit", key="btn_tres_cajas"):
-        t_v = preprocesar_texto(texto_vista)
-        t_o = preprocesar_texto(texto_oido)
-        t_m = preprocesar_texto(texto_mov)
-        
-        if not t_v and not t_o and not t_m:
+    texto = st.text_area("Descríbete:", key="texto")
+
+    if st.button("Submit", key="texto"):
+        if not texto_usuario.strip():
             st.warning("No lo dejes vacio")
         else:
-            v_res = int(vista.predict(encoder.encode([t_v]))[0]) if t_v else 1
-            o_res = int(oido.predict(encoder.encode([t_o]))[0]) if t_o else 1
+            t_m, t_o, t_v = preprocesar_texto(texto_usuario)
+
             m_res = int(mov.predict(encoder.encode([t_m]))[0]) if t_m else 1
-            
+            o_res = int(oido.predict(encoder.encode([t_o]))[0]) if t_o else 1
+            v_res = int(vista.predict(encoder.encode([t_v]))[0]) if t_v else 1
+
             mostrar_canales(m_res, o_res, v_res)
+
 st.divider()
 st.caption("Autor: Jotpartap Singh - GitHub: [https://github.com/jotpartap/inclusiveCar](https://github.com/jotpartap/inclusiveCar)")
