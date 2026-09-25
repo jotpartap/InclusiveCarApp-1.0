@@ -243,7 +243,7 @@ def preprocesar_texto(texto):
         return "", "", ""
 
     texto = texto.lower().strip()
-    texto = " ".join(texto_limpio.split())
+    texto = " ".join(texto.split())
 
     conectores = r'\b(?:y|e|o|u|pero|además|ademas|mientras|que|también|tambien)\b|[,;.:!?¡¿]'
     fragmentos = [f.strip() for f in re.split(conectores, texto, flags=re.IGNORECASE) if f.strip()]
