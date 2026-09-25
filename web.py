@@ -302,7 +302,7 @@ with tab2:
         if not texto_usuario.strip():
             st.warning("No lo dejes vacio")
         else:
-            t_m, t_o, t_v = preprocesar_texto(texto_usuario)
+            t_m, t_o, t_v = preprocesar_texto(texto)
 
             m_res = int(mov.predict(encoder.encode([t_m]))[0]) if t_m else 1
             o_res = int(oido.predict(encoder.encode([t_o]))[0]) if t_o else 1
