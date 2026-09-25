@@ -299,7 +299,7 @@ with tab2:
     texto = st.text_area("Descríbete:", key="texto")
 
     if st.button("Submit", key="texto2"):
-        if not texto_usuario.strip():
+        if not texto.strip():
             st.warning("No lo dejes vacio")
         else:
             t_m, t_o, t_v = preprocesar_texto(texto)
