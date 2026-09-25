@@ -245,15 +245,33 @@ def preprocesar_texto(texto):
     texto = texto.lower().strip()
     texto = " ".join(texto.split())
 
-    conectores = r'\b(?:y|e|o|u|pero|además|ademas|mientras|que|también|tambien)\b|[,;.:!?¡¿]'
-    fragmentos = [f.strip() for f in re.split(conectores, texto, flags=re.IGNORECASE) if f.strip()]
+    patron = r'\b(?:y|e|o|u|pero|però|además|ademas|mientras|que|también|tambien)\b|[,;.:!?¡¿]'
+    fragmentos = [f.strip() for f in re.split(patron, texto_limpio, flags=re.IGNORECASE) if f.strip()]
 
     if not fragmentos:
         fragmentos = [texto]
 
     frag_m, frag_o, frag_v = [], [], []
 
+    kw_vista = ["ciego", "ciega", "vista", "veo", "baja vision", "visión", "ceguera", "ojo", "ojos", "ver"]
+    kw_oido = ["sordo", "sorda", "oido", "oído", "escucho", "oigo", "audicion", "audición", "sordera", "escuchar", "oir"]
+    kw_mov = ["silla", "ruedas", "caminar", "andar", "tdah", "movilidad", "piernas", "pie", "andador", "baston", "bastón"]
+
     for frag in fragmentos:
+        es_v = any(kw in frag for kw in kw_vista)
+        es_o = any(kw in frag for kw in kw_oido)
+        es_m = any(kw in frag for kw in kw_mov)
+
+        if es_v and not es_o and not es_m:
+            frag_v.append(frag)
+            continue
+        elif es_o and not es_v and not es_m:
+            frag_o.append(frag)
+            continue
+        elif es_m and not es_v and not es_o:
+            frag_m.append(frag)
+            continue
+
         emb = encoder.encode([frag])
 
         pred_m = int(mov.predict(emb)[0])
