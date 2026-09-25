@@ -246,7 +246,7 @@ def preprocesar_texto(texto):
     texto = " ".join(texto.split())
 
     patron = r'\b(?:y|e|o|u|pero|però|además|ademas|mientras|que|también|tambien)\b|[,;.:!?¡¿]'
-    fragmentos = [f.strip() for f in re.split(patron, texto_limpio, flags=re.IGNORECASE) if f.strip()]
+    fragmentos = [f.strip() for f in re.split(patron, texto, flags=re.IGNORECASE) if f.strip()]
 
     if not fragmentos:
         fragmentos = [texto]
