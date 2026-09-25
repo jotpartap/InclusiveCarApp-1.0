@@ -298,7 +298,7 @@ with tab1:
 with tab2:
     texto = st.text_area("Descríbete:", key="texto")
 
-    if st.button("Submit", key="texto"):
+    if st.button("Submit", key="texto2"):
         if not texto_usuario.strip():
             st.warning("No lo dejes vacio")
         else:
